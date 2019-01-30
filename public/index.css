@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+   }
+   
+   body {
+     margin: 0px;
+     background:url('vision.jpg') no-repeat center fixed;
+   }
+
+   .openingBox {
+    color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-bottom: solid white;
+    font-size: 25px;
+   }
+
+   .signUpBox {
+    width: 55%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right:auto;
+    background:rgba(245, 245, 238, 0.8);
+    padding-bottom: 5px;
+   }
+
+   .u-name {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+   .p-word {
+    padding: 10px;
+}
+
+.username1 {
+display: block;
+}
+
+legend {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.submit {
+    display: block;
+    width: 100px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: none;
+  cursor: pointer
+}
