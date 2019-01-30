@@ -45,7 +45,7 @@ describe('Goals', function() {
 
   
   it('should add an item on POST', function() {
-   // const newItem = {category: 'a', comments: [], goal: 'WIN'};
+   const newItem = {category: 'a', comments: [], goal: 'WIN'};
     return chai.request(app)
       .post('/goals')
       .send(newItem)
