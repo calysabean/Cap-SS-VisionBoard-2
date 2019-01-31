@@ -1,22 +1,26 @@
 'use strict';
 
+require('dotenv').config();
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
-var cors = require('cors')
+var cors = require('cors');
 
 mongoose.Promise = global.Promise;
 
 const { DATABASE_URL, PORT } = require('./config');
 const { Goal } = require('./models');
 
+//const { User, Goal } = require('./models');
+//const { router: usersRouter } = require('./users');
+//const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
+
 const app = express();
 
 app.use(morgan('common'));
 app.use(express.json());
 app.use(express.static('public'));
-
 app.use(cors());
 
 var whitelist = ['/goals']
@@ -35,7 +39,7 @@ app.get('/goals/:id', cors(corsOptionsDelegate), function (req, res, next) {
 })
 
 // use cors middleware instead
-/*app.use(function (req, res, next) {
+app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
@@ -43,14 +47,24 @@ app.get('/goals/:id', cors(corsOptionsDelegate), function (req, res, next) {
     return res.send(204);
   }
   next();
-});*/
+});
 
-/*const jwtAuth = passport.authenticate('jwt', { session: false });
+//passport.use(localStrategy);
+//passport.use(jwtStrategy);
 
-app.get('/protected', jwtAuth, (req, res) => {
+//app.use('/api/users/', usersRouter);
+//app.use('/api/auth/', authRouter);
+
+//const jwtAuth = passport.authenticate('jwt', { session: false });
+
+/*app.get('/api/protected', jwtAuth, (req, res) => {
   return res.json({
     data: 'rosebud'
   });
+});*/
+
+/*app.use('*', (req, res) => {
+  return res.status(404).json({ message: 'Not Found' });
 });*/
 
 app.get('/goals', (req, res) => {
@@ -464,9 +478,13 @@ app.use('*', function (req, res) {
 
 let server;
 
-function runServer(databaseUrl, port = PORT) {
+/*function runServer(databaseUrl, port = PORT) {
   return new Promise((resolve, reject) => {
-    mongoose.connect(databaseUrl, err => {
+    mongoose.connect(databaseUrl, err => {*/
+
+function runServer(DATABASE_URL, port = PORT) {
+  return new Promise((resolve, reject) => {
+    mongoose.connect(DATABASE_URL, err => {
       if (err) {
         return reject(err);
       }

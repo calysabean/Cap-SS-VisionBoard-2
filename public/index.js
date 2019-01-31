@@ -9,15 +9,16 @@
 getAllGoals();*/
 
 
-fetch('/goals')
+/*fetch('/goals')
 	.then((goals) => {document.getElementsByClassName('results').appendChild(`
-    <div class="display">							
+    <div class="display">	
+    <p> Hello </p>						
     <h6> ${goals.category}</h6>
     
     </div>  `)
     
-});
-/*function getAllGoals() {
+});*/
+function getAllGoals() {
 	$('.results').html("");
 	$.ajax({
 			method: 'GET',
@@ -25,17 +26,15 @@ fetch('/goals')
 			dataType: 'json'
 		})
 		.done((goals) => {
-			category.forEach((status) => {
-			$('.results').append(`
+            console.log(goals);
+			goals.forEach((status) => {
+			$('.results1').append(`
 			<div class="display">							
-            <h6> ${goals.category}</h6>
-            
+            <h2> ${status.category}</h6>
+            <h2> ${status.category}</h6>
             </div>
 														`)
 			})
-
-			$('form#new-status :input').val("");
-			$('#new-entry').addClass('hide-display');
 		})
 }
 
@@ -59,4 +58,4 @@ function displayResults(data) {
       }
     }
 
-   $(watchSubmit);*/
+   $(watchSubmit);
