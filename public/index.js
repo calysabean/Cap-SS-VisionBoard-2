@@ -18,6 +18,8 @@ getAllGoals();*/
     </div>  `)
     
 });*/
+
+
 function getAllGoals() {
 	$('.results').html("");
 	$.ajax({
@@ -59,3 +61,5 @@ function displayResults(data) {
     }
 
    $(watchSubmit);
+
+   
