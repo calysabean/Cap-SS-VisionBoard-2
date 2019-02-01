@@ -38,10 +38,7 @@ function getAllGoals() {
 														`)
 			})
 		})
-}
-
-getAllGoals();
-nextPage() 
+} 
 
 $(document).ready(() => {
 	getAllGoals()
