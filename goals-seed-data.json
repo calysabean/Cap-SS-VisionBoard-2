@@ -1,16 +1,16 @@
-{"category": "career", "goal": "Improve Communication Skills"}
-{"category": "career", "goal": "Enhance Leadership Ability"}
-{"category": "career", "goal": "Gain Teamwork Experience"}
-{"category": "career", "goal": "Learn A New Technology"}
-{"category": "career", "goal": "Improving the quality of your work"}
-{"category": "career", "goal": "Improving customer service and customer experience"}
-{"category": "career", "goal": "Improving your public speaking"}
-{"category": "career", "goal": "To become a manager"}
-{"category": "career", "goal": "Improving your problem solving"}
-{"category": "career", "goal": "Improving the creativity"}
-{"category": "career", "goal": "Improve productivity"}
-{"category": "career", "goal": "Receive a promotion "}
-{"category": "financial", "goal": "Pay off debt"}
+{"category": "Career", "goal": ["Improve Communication Skills", "TEST", "TEST"]}
+{"category": "Career", "goal": "Enhance Leadership Ability"}
+{"category": "Career", "goal": "Gain Teamwork Experience"}
+{"category": "Career", "goal": "Learn A New Technology"}
+{"category": "Career", "goal": "Improving the quality of your work"}
+{"category": "Career", "goal": "Improving customer service and customer experience"}
+{"category": "Career", "goal": "Improving your public speaking"}
+{"category": "Career", "goal": "To become a manager"}
+{"category": "Career", "goal": "Improving your problem solving"}
+{"category": "Career", "goal": "Improving the creativity"}
+{"category": "Career", "goal": "Improve productivity"}
+{"category": "Career", "goal": "Receive a promotion "}
+{"category": "Financial", "goal": "Pay off debt"}
 {"category": "financial", "goal": "Improve credit score"}
 {"category": "financial", "goal": "Improve savings"}
 {"category": "financial", "goal": "Plan for early retirement"}
