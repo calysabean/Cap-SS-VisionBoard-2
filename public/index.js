@@ -1,12 +1,12 @@
 
-/*function getAllGoals() {
-  $('form').submit(function (event) {
+function nextPage() {
+  $('.submit').submit(function (event) {
     event.preventDefault();
-	$('.results').load('/goals')
+	$('.results').load('index.html')
 })
 }
 
-getAllGoals();*/
+/*getAllGoals();*/
 
 
 /*fetch('/goals')
@@ -41,6 +41,7 @@ function getAllGoals() {
 }
 
 getAllGoals();
+nextPage() 
 
 $(document).ready(() => {
 	getAllGoals()
@@ -62,4 +63,7 @@ function displayResults(data) {
 
    $(watchSubmit);
 
-   
+   $(() => {
+    getAllGoals();
+nextPage()  
+  });
