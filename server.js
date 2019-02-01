@@ -478,11 +478,46 @@ app.use('*', function (req, res) {
 
 let server;
 
+function runServer() {
+  const port = process.env.PORT || 8080;
+  return new Promise((resolve, reject) => {
+    server = app
+      .listen(port, () => {
+        console.log(`Your app is listening on port ${port}`);
+        resolve(server);
+      })
+      .on("error", err => {
+        reject(err);
+      });
+  });
+}
+
+// like `runServer`, this function also needs to return a promise.
+// `server.close` does not return a promise on its own, so we manually
+// create one.
+function closeServer() {
+  return new Promise((resolve, reject) => {
+    console.log("Closing server");
+    server.close(err => {
+      if (err) {
+        reject(err);
+        // so we don't also call `resolve()`
+        return;
+      }
+      resolve();
+    });
+  });
+}
+
+if (require.main === module) {
+  runServer().catch(err => console.error(err));
+}
+
 /*function runServer(databaseUrl, port = PORT) {
   return new Promise((resolve, reject) => {
     mongoose.connect(databaseUrl, err => {*/
 
-function runServer(DATABASE_URL, port = PORT) {
+/*function runServer(DATABASE_URL, port = PORT) {
   return new Promise((resolve, reject) => {
     mongoose.connect(DATABASE_URL, err => {
       if (err) {
@@ -516,6 +551,6 @@ function closeServer() {
 
 if (require.main === module) {
   runServer(DATABASE_URL).catch(err => console.error(err));
-}
+}*/
 
 module.exports = { runServer, app, closeServer };
