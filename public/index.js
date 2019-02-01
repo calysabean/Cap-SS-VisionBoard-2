@@ -31,7 +31,7 @@ function getAllGoals() {
 			$('.results1').append(`
 			<div class="display">							
             <h2> ${status.category}</h6>
-            <h2> ${status.category}</h6>
+            <h2> ${status.goal}</h6>
             </div>
 														`)
 			})
