@@ -1,7 +1,6 @@
 $(() => {
     getAllGoals();
     nextPage(); 
-    watchSubmit(); 
   });
 
 function nextPage() {
@@ -31,20 +30,5 @@ function getAllGoals() {
 		})
 } 
 
-function displayResults(data) {
-    const searchResults = data.category.map((item, index) => displayResult(item));
-    $('.results').html(searchResults);
-   }
-   
-   function watchSubmit() {
-    function getAllGoals() {
-        $('form').submit(function (event) {
-          event.preventDefault();
-          $('.results').load('/goals')
-      })
-      }
-    }
-
-   $(watchSubmit);
 
  
