@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign-up Page</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Source+Sans+Pro" rel="stylesheet">
+<link rel="stylesheet" href="index.css" type="text/css">
+</head>
+
+<body>
+
+<main>
+  <section>       
+
+<!-- The Navigation section provides the first introduction for the name of the app: Visio as well as the introduction-->
+    <nav role="navigation">
+      <h1>Visio</h1> 
+    </nav>
+
+    <section>
+       <div class="signUpIn1"> 
+
+      <form role="form" method="post" action="">
+         <legend>Login or SignUp</legend>
+
+         <label class="name" for="firstName">First Name:
+            <input id="firstName" type="text" title="firstName" class="input"  placeholder=" First Name" required>
+        </label>
+
+        <label class="name" for="lastName">Last Name:
+            <input id="lastName" type="text" title="lastName" class="input"  placeholder=" Last Name" required>
+        </label>
+
+        <label class="name" for="username1">Username:
+           <input id="username1" type="text" title="Username1" class="input"  placeholder="Enter Username e.g. my@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        </label>
+
+<label for="name">Password:
+     <input id="password1" title="password1"  type="text" class="input" placeholder="Enter Password" required>
+      </label>
+
+    <button type="submit" class="signUP1">Signup</button>
+    <div class="center">
+    <button method="GET" action="./goals" type="submit" class="reloadButton">Return to Home</button>
+    <!--<button onclick="location.href='index.html';" type="submit" class="reloadButton">Return to Home</button>-->
+
+    </div>
+           </form>
+           </div>
+          </section>
+  </main>
+        
+    <script src="index.js"></script>
+  </body>
+</html>

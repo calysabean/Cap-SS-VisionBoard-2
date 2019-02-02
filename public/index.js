@@ -1,3 +1,8 @@
+$(() => {
+    getAllGoals();
+    nextPage(); 
+    watchSubmit(); 
+  });
 
 function nextPage() {
   $('.submit').submit(function (event) {
@@ -6,22 +11,8 @@ function nextPage() {
 })
 }
 
-/*getAllGoals();*/
-
-
-/*fetch('/goals')
-	.then((goals) => {document.getElementsByClassName('results').appendChild(`
-    <div class="display">	
-    <p> Hello </p>						
-    <h6> ${goals.category}</h6>
-    
-    </div>  `)
-    
-});*/
-
-
 function getAllGoals() {
-	$('.results').html("");
+	$('.dashboaresults1').html("");
 	$.ajax({
 			method: 'GET',
 			url: '/goals',
@@ -30,7 +21,7 @@ function getAllGoals() {
 		.done((goals) => {
             console.log(goals);
 			goals.forEach((status) => {
-			$('.results1').append(`
+			$('.dashboaresults1').append(`
 			<div class="display">							
             <h2> ${status.category}</h6>
             <h2> ${status.goal}</h6>
@@ -39,10 +30,6 @@ function getAllGoals() {
 			})
 		})
 } 
-
-$(document).ready(() => {
-	getAllGoals()
-}); 
 
 function displayResults(data) {
     const searchResults = data.category.map((item, index) => displayResult(item));
@@ -60,7 +47,4 @@ function displayResults(data) {
 
    $(watchSubmit);
 
-   $(() => {
-    getAllGoals();
-nextPage()  
-  });
+ 
