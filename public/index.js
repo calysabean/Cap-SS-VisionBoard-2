@@ -27,10 +27,6 @@ function getAllGoals() {
 		})
 } 
 
-
-
-   $(watchSubmit);
-
    $(() => {
     getAllGoals();
     nextPage(); 
