@@ -10,11 +10,11 @@ var cors = require('cors');
 mongoose.Promise = global.Promise;
 
 const { DATABASE_URL, PORT } = require('./config');
-const { Goal } = require('./models');
+//const { Goal } = require('./models');
 
-//const { User, Goal } = require('./models');
-//const { router: usersRouter } = require('./users');
-//const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
+const { User, Goal } = require('./models');
+const { router: usersRouter } = require('./users');
+const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
 
 const app = express();
 
@@ -49,19 +49,19 @@ app.use(function (req, res, next) {
   next();
 });
 
-//passport.use(localStrategy);
-//passport.use(jwtStrategy);
+passport.use(localStrategy);
+passport.use(jwtStrategy);
 
-//app.use('/api/users/', usersRouter);
-//app.use('/api/auth/', authRouter);
+app.use('/api/users/', usersRouter);
+app.use('/api/auth/', authRouter);
 
-//const jwtAuth = passport.authenticate('jwt', { session: false });
+const jwtAuth = passport.authenticate('jwt', { session: false });
 
-/*app.get('/api/protected', jwtAuth, (req, res) => {
+app.get('/api/protected', jwtAuth, (req, res) => {
   return res.json({
     data: 'rosebud'
   });
-});*/
+});
 
 /*app.use('*', (req, res) => {
   return res.status(404).json({ message: 'Not Found' });
@@ -478,7 +478,7 @@ app.use('*', function (req, res) {
 
 let server;
 
-function runServer() {
+/*function runServer() {
   const port = process.env.PORT || 8080;
   return new Promise((resolve, reject) => {
     server = app
@@ -511,13 +511,13 @@ function closeServer() {
 
 if (require.main === module) {
   runServer().catch(err => console.error(err));
-}
+}*/
 
 /*function runServer(databaseUrl, port = PORT) {
   return new Promise((resolve, reject) => {
     mongoose.connect(databaseUrl, err => {*/
 
-/*function runServer(DATABASE_URL, port = PORT) {
+function runServer(DATABASE_URL, port = PORT) {
   return new Promise((resolve, reject) => {
     mongoose.connect(DATABASE_URL, err => {
       if (err) {
@@ -551,6 +551,6 @@ function closeServer() {
 
 if (require.main === module) {
   runServer(DATABASE_URL).catch(err => console.error(err));
-}*/
+}
 
 module.exports = { runServer, app, closeServer };
