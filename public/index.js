@@ -1,7 +1,4 @@
-$(() => {
-    getAllGoals();
-    nextPage(); 
-  });
+
 
 function nextPage() {
   $('.submit').submit(function (event) {
@@ -31,4 +28,11 @@ function getAllGoals() {
 } 
 
 
+
+   $(watchSubmit);
+
+   $(() => {
+    getAllGoals();
+    nextPage(); 
+  });
  
