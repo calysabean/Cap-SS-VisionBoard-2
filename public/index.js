@@ -71,3 +71,16 @@ function processUser(registeredUser) {
     nextPage(); 
   });
  
+  /* function for pick-goals page*/
+
+  /*function selectedData(){
+    $('.pickGoals').on('click', function (event) {
+      event.preventDefault();
+  
+      $.each($("input[name='answer']:not(:checked)"), function() {
+    $(this).closest('div').hide();
+      });
+      }) */
+
+    
+      
