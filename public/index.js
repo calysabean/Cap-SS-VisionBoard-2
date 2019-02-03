@@ -70,6 +70,13 @@ function processUser(registeredUser) {
     getAllGoals();
     nextPage(); 
   });
+
+
+/*$('.js-row"').on('click', function(event) {
+event.preventDefault();
+return document.html(`Are you sure you want to return to the options page?`    
+});
+      use modal?*/
  
   /* function for pick-goals page*/
 
@@ -77,13 +84,25 @@ function processUser(registeredUser) {
     $('.pickGoals').on('click', function (event) {
       event.preventDefault();
   
-      $.each($("input[name='answer']:not(:checked)"), function() {
-    $(this).closest('div').hide();
-      });
+      $.each($("input[name='answer'](:checked)"), function() {
+
+    });
       }) */
 
-/*$('.js-row"').on('click', function(event) {
-event.preventDefault();
-return document.html(`Are you sure you want to return to the options page?`    
-});
-      use modal?*/
+      function displayResult(result) {
+        return `
+        <div class="viewPort formCss">
+        <section class="formCss3">
+        <form class="finalResults">
+          <fieldset>
+          <label for="answerOption">
+          <input title="checkBox" class="answerOption" type="checkbox" value="${result.goal}" name="answer" >
+          </label>
+          </fieldset>
+          </form>
+          <p>${result.category}</p>
+          <p>${result.goal}</p>
+          </section>
+        </div> 
+        `;
+      }

@@ -23,28 +23,26 @@ describe('Goals', function() {
     return closeServer();
   });
 
-  it('should list items on GET', function(done) {
+  it('should list items on GET', () => {
    
     return chai.request(app)
       .get('/goals')
-      .then(function(res) {
+      .then( res => {
         res.should.have.status(200);
         res.should.be.json;
         res.body.should.be.a('array');
         res.body.length.should.be.at.least(1);
         const expectedKeys = ['category', 'goal'];
-        console.log(res.body);
         res.body.forEach(function(item) {
           item.should.be.a('object');
           item.should.include.keys(expectedKeys);
 
         });
-        done();
       });
   });
 
   
-  it('should add an item on POST', function(done) {
+  it('should add an item on POST', function() {
    const newItem = {category: 'a', comments: [], goal: 'WIN'};
     return chai.request(app)
       .post('/goals')
@@ -58,12 +56,11 @@ describe('Goals', function() {
         
         
         res.body.should.deep.equal(Object.assign(newItem, {id: res.body.id}));
-        done();
       });
   });
 
 
-  it('should update items on PUT', function(done) {
+  it('should update items on PUT', function() {
     
     const updateData = {
       category: 'Yes',
