@@ -60,10 +60,10 @@ function processUser(registeredUser) {
         }
         
     })
-    /*.then(response => {
-      $('.js-signup-status').text(response.location +":   "+ response.message);
+    .then(response => {
+      $('.jSsignUP1').text(response.location +":   "+ response.message);
     })
-    .catch(error => console.log('Bad request'));*/
+    .catch(error => console.log('Bad request'));
 };
 
    $(() => {
