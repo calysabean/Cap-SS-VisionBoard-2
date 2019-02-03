@@ -23,7 +23,7 @@ describe('Goals', function() {
     return closeServer();
   });
 
-  it('should list items on GET', function() {
+  it('should list items on GET', () => {
    
     return chai.request(app)
       .get('/goals')
@@ -32,11 +32,11 @@ describe('Goals', function() {
         res.should.be.json;
         res.body.should.be.a('array');
         res.body.length.should.be.at.least(1);
-        const expectedKeys = ['category', 'goal'];
+        const expectedKeys = ('category', 'goal');
         res.body.forEach(function(item) {
           item.should.be.a('object');
-          //item.should.include.keys(expectedKeys);
- 
+          item.should.include.keys(expectedKeys);
+
         });
       });
   });
