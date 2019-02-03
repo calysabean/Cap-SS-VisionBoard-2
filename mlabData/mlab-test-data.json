@@ -1,0 +1,67 @@
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbf6"},"category":"Career","goal":"Gain Teamwork Experience"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbf7"},"category":"Career","goal":"Improving the quality of your work"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbf8"},"category":"Career","goal":"Improving customer service and customer experience"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbf9"},"category":"Career","goal":"To become a manager"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbfa"},"category":"Career","goal":"Enhance Leadership Ability"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbfb"},"category":"Career","goal":"Improving your public speaking"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbfc"},"category":"Career","goal":"Improving your problem solving"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbfd"},"category":"Career","goal":"Improve Communication Skills"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbfe"},"category":"Financial","goal":"Pay off debt"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfbff"},"category":"Financial","goal":"Improve credit score"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc00"},"category":"Financial","goal":"Improve savings"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc01"},"category":"Financial","goal":"Plan for early retirement"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc02"},"category":"Financial","goal":"Create multiple streams of income"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc03"},"category":"Financial","goal":"Reduce expenses"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc04"},"category":"Career","goal":"Improving the creativity"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc05"},"category":"Career","goal":"Improve productivity"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc06"},"category":"Career","goal":"Receive a promotion "}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc07"},"category":"Financial","goal":"Set up a Long-term Financial Goal"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc08"},"category":"Financial","goal":"Keep accurate records"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc09"},"category":"Financial","goal":"Create and follow a budget"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc0a"},"category":"Physical","goal":"Create an exercise plan"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc0b"},"category":"Physical","goal":"Create a nutrition plan"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc0c"},"category":"Physical","goal":"Gain weight"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc0d"},"category":"Physical","goal":"Lose weight"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc0e"},"category":"Physical","goal":"Bulk up"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc0f"},"category":"Physical","goal":"Gain Lean Muscle"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc10"},"category":"Physical","goal":"Walk for 30 minutes a day"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc11"},"category":"Physical","goal":"Workout for one hour"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc12"},"category":"Physical","goal":"Go swimming weekly"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc13"},"category":"Physical","goal":"Go cycling"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc14"},"category":"Physical","goal":"Go to the gym weekly"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc15"},"category":"Physical","goal":"Maintain a healthy weight"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc16"},"category":"Personal-Development","goal":"Read Weekly"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc17"},"category":"Personal-Development","goal":"Create better relationships"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc18"},"category":"Financial","goal":"Reduce overall debt"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc19"},"category":"Personal-Development","goal":"Learn something new"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc1a"},"category":"Financial","goal":"Increase savings"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc1b"},"category":"Financial","goal":"Save for an Emergency Fund"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc1c"},"category":"Personal-Development","goal":"Improve body language"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc1d"},"category":"Personal-Development","goal":"Become a better communicator"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc1e"},"category":"Personal-Development","goal":"Become a better listener"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc1f"},"category":"Personal-Development","goal":"Increase social skill"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc20"},"category":"Personal-Development","goal":"Manage stress better"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc21"},"category":"Personal-Development","goal":"Be more empathetic"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc22"},"category":"Personal-Development","goal":"Be kinder"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc23"},"category":"Personal-Development","goal":"Be a better listener"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc24"},"category":"Spiritual","goal":"Take spiritual journey more seriously"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc25"},"category":"Spiritual","goal":"Set spiritual goals"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc26"},"category":"Spiritual","goal":"Complete one spiritual goal each week"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc27"},"category":"Spiritual","goal":"Complete two spiritual goals each week"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc28"},"category":"Spiritual","goal":"Meditate on spiritual goals"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc29"},"category":"Spiritual","goal":"Pray on spiritual goals"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc2a"},"category":"Spiritual","goal":"Engage with others who share spiritual goals"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc2b"},"category":"Spiritual","goal":"Read text related to spiritual goals"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc2c"},"category":"Spiritual","goal":"Meditate on text related to spiritual goals"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc2d"},"category":"Experiential","goal":"Travel the world"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc2e"},"category":"Experiential","goal":"Travel in my city"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc2f"},"category":"Experiential","goal":"Visit 1 country"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc30"},"category":"Experiential","goal":"Visit two countries"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc31"},"category":"Personal-Development","goal":"Be more compassionate"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc32"},"category":"Experiential","goal":"Plan a Weekend Trip with friends"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc33"},"category":"Experiential","goal":"Find an outdoor event to attend"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc34"},"category":"Experiential","goal":"Travel in my city"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc35"},"category":"Experiential","goal":"Travel more in my country"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc36"},"category":"Experiential","goal":"Go hiking"}
+{"_id":{"$oid":"5c539c3c2e6871f351fdfc37"},"category":"Experiential","goal":"Attend a concert"}
+{"_id":{"$oid":"5c570eca5d33e1129ab2bb70"},"category":"a","goal":"WIN","comments":[],"__v":0}
