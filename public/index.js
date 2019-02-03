@@ -53,7 +53,7 @@ function processUser(registeredUser) {
     })
     .then(response => {
         if (response.status === 201) {
-            window.location.href = "/pick-goals.html";  
+            window.location.href = "pick-goals.html";  
         }
         else {   
            return response.json()
