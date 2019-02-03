@@ -27,6 +27,45 @@ function getAllGoals() {
 		})
 } 
 
+$('.jSsignUpForm').on('click', '.jSsignUP1', function(event) {
+    event.preventDefault();
+    let registeredUser = {};
+    registeredUser.username = $('.jsUserName').val();
+    registeredUser.password = $('.jsPassword').val();
+    registeredUser.firstName = $('.jsFirstName').val();
+    registeredUser.lastName = $('.jsLastName').val();
+    processUser(registeredUser)
+    $('.jsUserName').val('');
+    $('.jsPassword').val('')
+    $('.jsFirstName').val('');
+    $('.jsLastName').val('');
+});
+
+function processUser(registeredUser) {
+    fetch('/api/users', 
+    {
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify(registeredUser)
+    })
+    .then(response => {
+        if (response.status === 201) {
+            window.location.href = "/pick-goals.html";  
+        }
+        else {   
+           return response.json()
+        }
+        
+    })
+    /*.then(response => {
+      $('.js-signup-status').text(response.location +":   "+ response.message);
+    })
+    .catch(error => console.log('Bad request'));*/
+};
+
    $(() => {
     getAllGoals();
     nextPage(); 
