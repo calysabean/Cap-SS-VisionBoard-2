@@ -23,7 +23,7 @@ describe('Goals', function() {
     return closeServer();
   });
 
-  it('should list items on GET', () => {
+  it('should list items on GET', function() {
    
     return chai.request(app)
       .get('/goals')
