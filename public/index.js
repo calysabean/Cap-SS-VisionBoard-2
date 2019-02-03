@@ -82,5 +82,8 @@ function processUser(registeredUser) {
       });
       }) */
 
-    
-      
+/*$('.js-row"').on('click', function(event) {
+event.preventDefault();
+return document.html(`Are you sure you want to return to the options page?`    
+});
+      use modal?*/
