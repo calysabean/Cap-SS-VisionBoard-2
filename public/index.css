@@ -151,3 +151,7 @@ cursor: pointer;
     margin-right: auto;
     margin-top: 10px;       
 }
+
+h2.display {
+color: white;
+}

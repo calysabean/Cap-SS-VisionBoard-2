@@ -63,7 +63,7 @@ function processUser(registeredUser) {
     .then(response => {
       $('.jSsignUP1').text(response.location +":   "+ response.message);
     })
-    .catch(error => console.log('Bad request'));
+    .catch(error => console.log('Oops something went wrong'));
 };
 
    $(() => {
