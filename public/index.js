@@ -25,7 +25,7 @@ function getAllGoals() {
         <form class="finalResults">
           <fieldset>
           <label for="answerOption">
-          <input title="checkBox" class="answerOption" type="checkbox" value="${result.goal}" name="answer" >
+          <input title="checkBox" class="answerOption" type="checkbox" value="${option.goal}" name="answer" >
           </label>
           </fieldset>
           <p>${option.category}</p>
