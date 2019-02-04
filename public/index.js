@@ -33,7 +33,6 @@ function getAllGoals() {
           </section>
           </form>
         </div> 
-        <button class="pickGoals" type="submit">Submit</button>
 			`)
 			})
 		})
