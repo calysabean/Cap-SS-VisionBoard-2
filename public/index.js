@@ -30,9 +30,9 @@ function getAllGoals() {
           </fieldset>
           <p>${option.category}</p>
           <p>${option.goal}</p>
-          <button class="pickGoals" type="submit">Submit</button>
           </section>
           </form>
+          <button class="pickGoals" type="submit">Submit</button>
         </div> 
 			`)
 			})
