@@ -16,13 +16,25 @@ function getAllGoals() {
 		})
 		.done((goals) => {
             console.log(goals);
-			goals.forEach((status) => {
-			$('.dashboaresults1').append(`
-			<div class="display">							
-            <h2> ${status.category}</h6>
-            <h2> ${status.goal}</h6>
-            </div>
-														`)
+			goals.forEach((option) => {
+            $('.dashboaresults1').append(`
+            
+
+        <div class="viewPort formCss">
+        <section class="formCss3">
+        <form class="finalResults">
+          <fieldset>
+          <label for="answerOption">
+          <input title="checkBox" class="answerOption" type="checkbox" value="${result.goal}" name="answer" >
+          </label>
+          </fieldset>
+          <p>${option.category}</p>
+          <p>${option.goal}</p>
+          <button class="pickGoals" type="submit">Submit</button>
+          </section>
+          </form>
+        </div> 
+			`)
 			})
 		})
 } 
@@ -87,7 +99,7 @@ return document.html(`Are you sure you want to return to the options page?`
       $.each($("input[name='answer'](:checked)"), function() {
 
     });
-      }) */
+      }) 
 
       function displayResult(result) {
         return `
@@ -105,4 +117,4 @@ return document.html(`Are you sure you want to return to the options page?`
           </section>
         </div> 
         `;
-      }
+      }*/
