@@ -32,8 +32,8 @@ function getAllGoals() {
           <p>${option.goal}</p>
           </section>
           </form>
-          <button class="pickGoals" type="submit">Submit</button>
         </div> 
+        <button class="pickGoals" type="submit">Submit</button>
 			`)
 			})
 		})
