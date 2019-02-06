@@ -85,7 +85,7 @@ function processUser(registeredUser) {
 $(document).ready(function() {
 $('.pickGoals').on('click', function(){
     var text = "";
-$('#answerOption:checked').forEach(function() {
+$('#answerOption:checked').each(function() {
     text += $(this).val() + ',';
 });
 text=text.substring(0, text.length-1);
