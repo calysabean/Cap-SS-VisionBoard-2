@@ -127,6 +127,29 @@ app.post('/goals', (req, res) => {
 
 });
 
+app.post('/vision-board', (req, res) => {
+  const requiredFields = ['category', 'goal'];
+  requiredFields.forEach(field => {
+    if (!(field in req.body)) {
+      const message = `Missing \`${field}\` in request body`;
+      console.error(message);
+      return res.status(400).send(message);
+    }
+  });
+
+  Goal
+  .create({
+    category: req.body.category,
+    goal: req.body.goal
+  })
+  .then(goalS => res.status(201).json(goalS.serialize()))
+  .catch(err => {
+    console.error(err);
+    res.status(500).json({ error: 'Something went wrong' });
+  });
+
+});
+
 
 app.put('/goals/:id', (req, res) => {
   if (!(req.params.id && req.body.id && req.params.id === req.body.id)) {

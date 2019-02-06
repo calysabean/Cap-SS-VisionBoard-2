@@ -22,10 +22,10 @@ function getAllGoals() {
 
         <div class="viewPort formCss">
         <section class="formCss3">
-        <form class="finalResults">
+        <form action="pick-goals.html" class="finalResults">
           <fieldset>
           <label for="answerOption">
-          <input title="checkBox" class="answerOption" type="checkbox" value="${option.goal}" name="answer" >
+          <input title="checkBox" id="answerOption" type="checkbox" value="${option.goal}" name="answer" >
           </label>
           </fieldset>
           <p>${option.category}</p>
@@ -82,6 +82,17 @@ function processUser(registeredUser) {
     nextPage(); 
   });
 
+$(document).ready(function() {
+$('.pickGoals').on('click', function(){
+    var text = "";
+$('#answerOption:checked').forEach(function() {
+    text += $(this).val() + ',';
+});
+text=text.substring(0, text.length-1);
+$('#selectedtext').val(text);
+})
+
+})
 
 /*$('.js-row"').on('click', function(event) {
 event.preventDefault();
@@ -96,11 +107,11 @@ return document.html(`Are you sure you want to return to the options page?`
       event.preventDefault();
   
       $.each($("input[name='answer'](:checked)"), function() {
-
+for (let i = 0; i < )
     });
-      }) 
+      }) */
 
-      function displayResult(result) {
+     /* function displayResult(result) {
         return `
         <div class="viewPort formCss">
         <section class="formCss3">
