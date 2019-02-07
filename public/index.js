@@ -151,10 +151,8 @@ for (let i = 0; i < )
 		.done((goals) => {
             console.log(goals);
 			goals.forEach((option) => {
-                for (let i = 0; i < option.length; i++) {
-                    if ($('.theClass:checkbox:checked').map(function() {
                 $('.my-chosen-results').append(`
-        <div class="viewPort formCss">
+        <div action="my-vision.html" method="POST" class="viewPort formCss">
         <section class="formCss3">
         <form action="pick-goals.html" class="finalResults">
           <fieldset>
@@ -169,8 +167,39 @@ for (let i = 0; i < )
         </div> 
 			`)
                     })
-                    }
-
-    })
-    })
     }
+    
+
+    /*function getAllGoals1() {
+        $('.my-chosen-results').html("");
+        $.ajax({
+                method: 'POST',
+                url: '/my-vision',
+                dataType: 'json'
+            })
+            .done((goals) => {
+                console.log(goals);
+                goals.forEach((option) => {
+                    for (let i = 0; i < option.length; i++) {
+                        if ($('.theClass:checkbox:checked').map(function() {
+                    $('.my-chosen-results').append(`
+            <div class="viewPort formCss">
+            <section class="formCss3">
+            <form action="pick-goals.html" class="finalResults">
+              <fieldset>
+              <label for="answerOption">
+              <input title="checkBox" id="answerOption" class="theClass" type="checkbox" value="${option.goal}" name="answer" >
+              </label>
+              </fieldset>
+              <p>${option.category}</p>
+              <p>${option.goal}</p>
+              </section>
+              </form>
+            </div> 
+                `)
+                        })
+                        )
+    
+        })
+        })
+            }*/
