@@ -82,6 +82,7 @@ function processUser(registeredUser) {
    $(() => {
     getAllGoals();
     nextPage(); 
+    getAllGoals1()
   });
 
  /* const answerOption = document.getElementById("answerOption");
@@ -140,7 +141,7 @@ for (let i = 0; i < )
       }*/
 
 
- /*function getAllGoals() {
+ function getAllGoals1() {
 	$('.my-chosen-results').html("");
 	$.ajax({
 			method: 'POST',
@@ -172,4 +173,4 @@ for (let i = 0; i < )
 
     })
     })
-    }*/
+    }
