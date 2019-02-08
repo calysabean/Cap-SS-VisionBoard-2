@@ -169,7 +169,7 @@ for (let i = 0; i < )
     }
     */
 
-    function getAllGoals1() {
+    /*function getAllGoals1() {
         $('.my-chosen-results').html("");
         $.ajax({
                 method: 'POST',
@@ -200,6 +200,6 @@ for (let i = 0; i < )
                         )
         })
         })
-            }
+            }*/
 
             
