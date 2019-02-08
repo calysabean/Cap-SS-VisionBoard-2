@@ -82,6 +82,7 @@ function processUser(registeredUser) {
 $(() => {
     getAllGoals();
     nextPage();
+    getAllGoals1();
 });
 
 /* const answerOption = document.getElementById("answerOption");
