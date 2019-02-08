@@ -15,7 +15,7 @@ function getAllGoals() {
         dataType: 'json'
     })
         .done((goals) => {
-            console.log(goals);
+           /* console.log(goals);*/
             goals.forEach((option) => {
                 $('.dashboaresults1').append(`
             
@@ -174,7 +174,9 @@ function getAllGoals1() {
         dataType: 'json'
     })
     .done((goals) => {
-        console.log(goals);
+        /*console.log(goals);*/
+        $('.pickGoals').on('click', function (event) {
+            event.preventDefault();
         goals.forEach((option) => {
             for (let i = 0; i < option.length; i++) {
                 if ($('.answerOption1:checkbox:checked')) {
