@@ -137,7 +137,7 @@ app.post('/my-vision', (req, res) => {
     }
   });
 
-  Goal
+  GoalPost
   .create({
     category: req.body.category,
     goal: req.body.goal
