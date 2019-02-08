@@ -12,7 +12,7 @@ mongoose.Promise = global.Promise;
 const { DATABASE_URL, PORT } = require('./config');
 //const { Goal } = require('./models');
 
-const { User, Goal } = require('./models');
+const { User, Goal, GoalPost} = require('./models');
 const { router: usersRouter } = require('./users');
 const { router: authRouter, localStrategy, jwtStrategy } = require('./auth');
 
@@ -128,7 +128,7 @@ app.post('/goals', (req, res) => {
 });
 
 app.post('/my-vision', (req, res) => {
-  const requiredFields = ['category'];
+  const requiredFields = ['category', 'goal'];
   requiredFields.forEach(field => {
     if (!(field in req.body)) {
       const message = `Missing \`${field}\` in request body`;

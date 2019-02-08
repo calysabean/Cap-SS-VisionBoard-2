@@ -22,6 +22,23 @@ goalSchema.methods.serialize = function() {
   };
 };
 
-const Goal = mongoose.model('Goal', goalSchema);
+var goalPostSchema = mongoose.Schema({
+  category: 'string',
+  goal: 'string',
+  comments: [commentSchema]
+});
 
-module.exports = { Goal};
+goalPostSchema.methods.serialize = function() {
+  return {
+    id: this._id,
+    category: this.category,
+    goal: this.goal,
+    comments: this.comments
+  };
+};
+
+const Goal = mongoose.model('Goal', goalSchema, );
+const GoalPost = mongoose.model('GoalPost', goalPostSchema);
+
+
+module.exports = { Goal, GoalPost};
