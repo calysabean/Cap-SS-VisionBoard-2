@@ -127,8 +127,8 @@ app.post('/goals', (req, res) => {
 
 });
 
-app.post('/vision-board', (req, res) => {
-  const requiredFields = ['category', 'goal'];
+app.post('/my-vision', (req, res) => {
+  const requiredFields = ['category'];
   requiredFields.forEach(field => {
     if (!(field in req.body)) {
       const message = `Missing \`${field}\` in request body`;
