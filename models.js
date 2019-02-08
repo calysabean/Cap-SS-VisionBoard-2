@@ -22,19 +22,6 @@ goalSchema.methods.serialize = function() {
   };
 };
 
-var goalPostSchema = mongoose.Schema({
-  goal: 'string',
-  comments: [commentSchema]
-});
+const Goal = mongoose.model('Goal', goalSchema);
 
-goalPostSchema.methods.serialize = function() {
-  return {
-    id: this._id,
-    goal: this.goal,
-    comments: this.comments
-  };
-};
-
-const Goal = mongoose.model('Goal', goalSchema, 'GoalPost', goalPostSchema);
-
-module.exports = { Goal, GoalPost};
+module.exports = { Goal};
