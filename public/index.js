@@ -22,9 +22,10 @@ function getAllGoals() {
 
         <div class="viewPort formCss">
         <section class="formCss3">
-          <p>${option.category}</p>
           <label for="${option._id}">
           <input title="checkBox" value="${option.goal}" id="${option._id}" class="answerOption1" type="checkbox" value="${option.goal}" name="answer" >
+          <p>${option.category}</p>
+          <p>${option.goal}</p>
           </label>
           </section>
         </div> 
