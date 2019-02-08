@@ -22,21 +22,10 @@ function getAllGoals() {
 
         <div class="viewPort formCss">
         <section class="formCss3">
-       //<form action="/my-vision" class="finalResults">
-        //   <fieldset>
-        //   <label for="${option._id}">
-        //   <input title="checkBox" id="${option._id}" class="answerOption1" type="checkbox" value="${option.goal}" name="answer" >
-        //   </label>
-//        </fieldset>
-<label for="${option._id}">
-<input title="checkBox" id="${option._id}" class="answerOption1" type="checkbox" value="${option.goal}" name="answer" >
-// <p>${option.category}</p>
-// <p>${option.goal}</p>
-</label>
-        //   <p>${option.category}</p>
-        //   <p>${option.goal}</p>
+          <label for="${option._id}">
+          <input title="checkBox" id="${option._id}" class="answerOption1" type="checkbox" value="${option.goal}" name="answer" >
+          </label>
           </section>
-        //   </form>
         </div> 
 			`)
             })
