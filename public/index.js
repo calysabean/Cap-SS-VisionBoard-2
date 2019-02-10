@@ -8,14 +8,13 @@ function nextPage() {
 }
 
 function myVisionPage() { 
-    $('main').on('click', function(event) {
-    $('main').remove();
+    $('firstHide').remove();
     $('.hiddenForm').css('display', 'block');
-  });
   }
 
   function selectedData(){
     $('.pickGoals').on('click', function (event) {
+        myVisionPage();
       event.preventDefault();
   
       $.each($("input[name='answer']:not(:checked)"), function() {
