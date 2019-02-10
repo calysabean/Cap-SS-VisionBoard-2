@@ -33,6 +33,21 @@ function myVisionPage() {
           })
           }
       
+          function deleteButton() {
+          $('.deleteGoals').on('click', function (event) {
+            event.preventDefault();
+         
+            $.ajax({
+                method: 'DELETE',
+                dataType: 'json',
+                contentType: 'application/json',
+                url: `/goals`
+            })
+            .done(function(result) {
+console.log('done');
+            })
+
+    });
 
 function getAllGoals() {
     $('.dashboaresults1').html("");
@@ -108,6 +123,7 @@ $(() => {
     /*getAllGoals1();*/
     selectedData();
     additionalOptions();
+    deleteButton();
 });
 
 /* const answerOption = document.getElementById("answerOption");
