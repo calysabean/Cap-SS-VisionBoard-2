@@ -23,6 +23,17 @@ function myVisionPage() {
       })
       }
 
+      function additionalOptions(){
+        $('.box').on('click', function (event) {
+          event.preventDefault();
+      
+          $.each($("input[name='answer']"), function() {
+        $(this).closest('div').show();
+          });
+          })
+          }
+      
+
 function getAllGoals() {
     $('.dashboaresults1').html("");
     $.ajax({
@@ -96,6 +107,7 @@ $(() => {
     nextPage();
     /*getAllGoals1();*/
     selectedData();
+    additionalOptions();
 });
 
 /* const answerOption = document.getElementById("answerOption");
