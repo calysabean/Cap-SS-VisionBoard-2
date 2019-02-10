@@ -7,6 +7,23 @@ function nextPage() {
     })
 }
 
+function myVisionPage() { 
+    $('main').on('click', function(event) {
+    $('main').remove();
+    $('.hiddenForm').css('display', 'block');
+  });
+  }
+
+  function selectedData(){
+    $('.pickGoals').on('click', function (event) {
+      event.preventDefault();
+  
+      $.each($("input[name='answer']:not(:checked)"), function() {
+    $(this).closest('div').hide();
+      });
+      })
+      }
+
 function getAllGoals() {
     $('.dashboaresults1').html("");
     $.ajax({
@@ -79,6 +96,7 @@ $(() => {
     getAllGoals();
     nextPage();
     getAllGoals1();
+    selectedData();
 });
 
 /* const answerOption = document.getElementById("answerOption");

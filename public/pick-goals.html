@@ -20,13 +20,71 @@
         
         <section>
            <h1>Pick your target goals and click submit!</h1>
-           <form id="myform" action="my-vision.html" >
-              <div class="dashboaresults1" ></div>
-           </form>
-            <input class="pickGoals" form="myform" type="submit"  />
     </section>
+
  
       </main>
+          
+              <section>
+
+                  <form id="myform" action="my-vision.html" >
+                      <div class="dashboaresults1" ></div>
+                   </form>
+                    <input class="pickGoals" form="myform" type="submit"  />
+          
+                <div class="hiddenForm">
+              <div class="row js-row">
+                <div class="col-3">
+                  <div class="box orange"><img src="career.jpg" alt="Career"> <p> <span>Career</span></p></div>
+                </div>
+                <div class="col-3">
+                  <div class="box blue"><img src="financial.jpg" alt="Financial"><p> <span>Financial</span> </p></div>
+                </div>
+                <div class="col-3">
+                  <div class="box green"><img src="spiritual.jpg" alt="Spiritual"><p> <span>Spiritual</span></p></div>
+                </div>
+              </div>
+          
+              <div class="row js-row">
+                <div class="col-4">
+                  <div class="box orange"><img src="experiential.jpg" alt="Experiential"><p> <span>Experiential</span></p></div>
+                </div>
+                <div class="col-4">
+                  <div class="box blue"><img src="physical.jpg" alt="Physical"><p> <span>Physical</span></p></div>
+                </div>
+                <div class="col-4">
+                  <div class="box green"><img src="personaldevelopment.jpg" alt="Personal-Development"><p> <span>Personal-Development</span> </p></div>
+                </div>
+              </div>
+
+ <button onclick="location.href='index.html';" type="submit" class="reloadButton">Return to Home</button>
+
+ <div class="my-chosen-results"></div>
+ <textarea name="" id="selectedtext'" cols="30" rows="10"></textarea>
+
+
+  <div class="signUpIn"> 
+
+    <form role="form" action="pick-goals.html">
+       <legend>Notes to reach my goals</legend>
+         <label class="category" for="category">
+         <input id="category" type="text" title="category" class="my-categoy"  placeholder="Enter Category" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+         </label>
+         
+         <label for="notes">
+          <input id="notes" title="notes"  type="text" class="my-notes" placeholder="Enter Notes" required>
+          </label>
+
+
+
+  <button type="submit" class="submit">submit</button>      
+         </form>
+           </div>
+
+<div class="post-results"></div>
+
+      </section>
+    </div>
 
       <script src="index.js"></script>
     </body>
