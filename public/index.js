@@ -94,7 +94,7 @@ function processUser(registeredUser) {
 $(() => {
     getAllGoals();
     nextPage();
-    getAllGoals1();
+    /*getAllGoals1();*/
     selectedData();
 });
 
@@ -183,7 +183,8 @@ for (let i = 0; i < )
    }
    */
 
-function getAllGoals1() {
+   
+/*function getAllGoals1() {
     $('.my-chosen-results').html("");
     $.ajax({
         method: 'POST',
@@ -191,7 +192,6 @@ function getAllGoals1() {
         dataType: 'json'
     })
     .done((goals) => {
-        /*console.log(goals);*/
         goals.forEach((option) => {
             for (let i = 0; i < option.length; i++) {
                 if ($('.answerOption1:checkbox:checked')) {
@@ -216,4 +216,4 @@ function getAllGoals1() {
             }
         })
     })
-}
+}*/
