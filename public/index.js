@@ -33,7 +33,7 @@ function myVisionPage() {
           })
           }
       
-          function deleteButton() {
+        /*  function deleteButton() {
           $('.deleteGoals').on('click', function (event) {
             event.preventDefault();
          
@@ -47,7 +47,7 @@ function myVisionPage() {
 console.log('done');
             })
 
-    });
+    });*/
 
 function getAllGoals() {
     $('.dashboaresults1').html("");
@@ -123,7 +123,7 @@ $(() => {
     /*getAllGoals1();*/
     selectedData();
     additionalOptions();
-    deleteButton();
+   /* deleteButton();*/
 });
 
 /* const answerOption = document.getElementById("answerOption");
