@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(cors());
 
-var whitelist = ['/goals']
+/*var whitelist = ['/goals']
 var corsOptionsDelegate = function (req, callback) {
   var corsOptions;
   if (whitelist.indexOf(req.header('Origin')) !== -1) {
@@ -36,7 +36,7 @@ var corsOptionsDelegate = function (req, callback) {
  
 app.get('/goals/:id', cors(corsOptionsDelegate), function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for a whitelisted domain.'})
-})
+})*/
 
 // use cors middleware instead
 app.use(function (req, res, next) {
@@ -94,7 +94,8 @@ app.get('/goals/:id', (req, res) => {
       res.json({
         id: item._id,
         category: item.category,
-        goal: item.goal
+        goal: item.goal,
+        comments: item.comments
       });
     })
     .catch(err => {
@@ -117,7 +118,8 @@ app.post('/goals', (req, res) => {
   Goal
   .create({
     category: req.body.category,
-    goal: req.body.goal
+    goal: req.body.goal,
+    comment: req.body.comment
   })
   .then(goalS => res.status(201).json(goalS.serialize()))
   .catch(err => {
