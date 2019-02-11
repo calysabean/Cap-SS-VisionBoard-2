@@ -97,7 +97,7 @@ legend {
 
 
 .logIn {
-margin-top: 20px;
+margin-top: 44px;
 width: 45%;
 padding: 2px;
 outline: none;
@@ -212,6 +212,7 @@ main .row {
     font-size: 25px;
     margin-bottom: 0px;
     text-align: center;
+    
   }
   
   p .box {
