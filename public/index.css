@@ -72,6 +72,16 @@
     font-weight: bold;
   }
 
+  input[type=password] {
+    width: 95%;
+    padding: 12px 20px;
+    margin-left: 2%;
+    display: block;
+    outline-style: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
    .u-name {
     padding-left: 10px;
     margin-bottom: 10px;
@@ -85,9 +95,6 @@ legend {
     text-align: center;
 }
 
-p {
-    text-align: center;
-}
 
 .logIn {
 margin-top: 20px;
@@ -204,7 +211,7 @@ main .row {
     width: 469px;
     font-size: 25px;
     margin-bottom: 0px;
-
+    text-align: center;
   }
   
   p .box {
