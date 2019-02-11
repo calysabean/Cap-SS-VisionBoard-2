@@ -41,7 +41,7 @@ function myVisionPage() {
                 method: 'DELETE',
                 dataType: 'json',
                 contentType: 'application/json',
-                url: `/goals`
+                url: '/goals'
             })
             .done(function(result) {
 console.log('done');
