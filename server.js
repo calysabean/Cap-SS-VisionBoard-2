@@ -147,10 +147,7 @@ app.delete('/goals/:id', cors(), (req, res) => {
       res.status(204).end();
     });
 })
-.catch(err => {
-  console.error(err);
-  res.status(500).json({ error: 'something went terribly wrong' });
-});
+
 
 let server;
 
