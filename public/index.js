@@ -1,4 +1,4 @@
-let url = 'https://murmuring-temple-70944.herokuapp.com/';
+let url = 'https://murmuring-temple-70944.herokuapp.com/goals';
 
 let id;
 
@@ -36,7 +36,7 @@ function myVisionPage() {
           }
 
           function deleteOption(id) {
-            let urlWithId = url + 'pick-goals.html?' + '/' + id;
+            let urlWithId = url + '/' + id;
             return fetch(urlWithId, {
                 method: 'delete'
                 })
