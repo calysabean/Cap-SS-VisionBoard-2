@@ -50,7 +50,7 @@ function myVisionPage() {
     function deleteButton() {
           $('.deleteGoals').on('click', function (event) {
             event.preventDefault();
-            let checkVal = $('.answerOption1').val();
+            let checkVal = $('.answerOption1:checked').val();
             deleteOption(checkVal);
             $('.answerOption1').val('');
 
