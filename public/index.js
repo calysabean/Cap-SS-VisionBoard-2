@@ -1,5 +1,7 @@
 let url = 'https://murmuring-temple-70944.herokuapp.com/';
 
+let id;
+
 function nextPage() {
     $('.submit').submit(function (event) {
         event.preventDefault();
@@ -54,6 +56,12 @@ function myVisionPage() {
             $('.answerOption1').val('');
 
     });
+}
+
+function getId(){
+	$('.viewPort').on('click', '.answerOption1', function(event){
+		id = $(this).attr('value');
+	});
 }
 
 function getAllGoals() {
@@ -131,6 +139,7 @@ $(() => {
     selectedData();
     additionalOptions();
     deleteButton();
+    getId();
 });
 
 /* const answerOption = document.getElementById("answerOption");
