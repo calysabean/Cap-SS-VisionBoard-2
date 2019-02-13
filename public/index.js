@@ -34,7 +34,7 @@ function myVisionPage() {
           }
 
           function deleteOption(id) {
-              let id = $('.answerOption1').val();
+            //  let id = $('.answerOption1').val();
             let optionID = url + '/' + id;
             return fetch(optionID, {
                 method: 'delete'
@@ -51,7 +51,7 @@ function myVisionPage() {
           $('.deleteGoals').on('click', function (event) {
             event.preventDefault();
             let checkVal = $('.answerOption1').val();
-            deleteOption();
+            deleteOption(checkVal);
             $('.answerOption1').val('');
 
     });
