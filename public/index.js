@@ -1,4 +1,4 @@
-
+let url = 'https://murmuring-temple-70944.herokuapp.com/';
 
 function nextPage() {
     $('.submit').submit(function (event) {
@@ -32,20 +32,26 @@ function myVisionPage() {
           });
           })
           }
+
+          function deleteOption(id) {
+            let urlWithId = url + '/' + id;
+            return fetch(urlWithId, {
+                method: 'delete'
+                })
+                .then(response => {
+                    console.log('hello!');
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+            }
       
     function deleteButton() {
           $('.deleteGoals').on('click', function (event) {
             event.preventDefault();
-         
-            $.ajax({
-                method: 'DELETE',
-                dataType: 'json',
-                contentType: 'application/json',
-                url: '/goals'
-            })
-            .done(function(result) {
-console.log('done');
-            })
+            let checkVal = $('.answerOption1').val();
+            deleteOption();
+            $('.answerOption1').val('');
 
     });
 }
@@ -66,7 +72,7 @@ function getAllGoals() {
         <div class="viewPort formCss">
         <section class="formCss3">
           <label for="${option._id}">
-          <input title="checkBox" value="${option.goal}" id="${option._id}" class="answerOption1" type="checkbox" value="${option.goal}" name="answer" >
+          <input title="checkBox" id="${option._id}" class="answerOption1" type="checkbox" value="${option._id}" name="answer" >
           <p>${option.category}</p>
           <p>${option.goal}</p>
           </label>
