@@ -1,7 +1,5 @@
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals';
 
-let id;
-
 function nextPage() {
     $('.submit').submit(function (event) {
         event.preventDefault();
@@ -36,12 +34,13 @@ function myVisionPage() {
           }
 
           function deleteOption(id) {
-            let urlWithId = url + '/' + id;
-            return fetch(urlWithId, {
+              let id = $('.answerOption1').val();
+            let optionID = url + '/' + id;
+            return fetch(optionID, {
                 method: 'delete'
                 })
                 .then(response => {
-                    console.log('hello!');
+                    console.log('Deleted');
                 })
                 .catch(err => {
                     console.error(err);
