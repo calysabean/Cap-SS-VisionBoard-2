@@ -1,4 +1,4 @@
-let url = 'https://murmuring-temple-70944.herokuapp.com/goals';
+let url = `https://murmuring-temple-70944.herokuapp.com/goals/${option._id}`;
 
 function nextPage() {
     $('.submit').submit(function (event) {
