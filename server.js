@@ -146,6 +146,10 @@ app.delete('/goals/:id', cors(), (req, res) => {
       console.log(`Deleted  post with id \`${req.params.id}\``);
       res.status(204).end();
     });
+})
+.catch(err => {
+  console.error(err);
+  res.status(500).json({ error: 'something went terribly wrong' });
 });
 
 let server;

@@ -35,7 +35,7 @@ function myVisionPage() {
           })
           }
 
-          function deleteOption(id) {
+          function deleteOption(getId) {
             let urlWithId = url + '/' + getId;
             return fetch(urlWithId, {
                 method: 'delete'
