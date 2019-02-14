@@ -281,7 +281,7 @@ return fetch('/goals',
         });
     }
 
-    function watchForm() {
+    /*function watchForm() {
     
 
         $(".new-goal").submit(event => {
@@ -302,10 +302,10 @@ return fetch('/goals',
         $(".js-edit").submit(event => {
             event.preventDefault();
             editGoal(goalId, goalName, mantraText);
-        });*/
-    }
+        });
+    }*/
     
-    $(watchForm);
+    /*$(watchForm);
 
     $(function () {
         getGoals();
@@ -346,4 +346,4 @@ return fetch('/goals',
                 </li>`
             )
         };
-    };
+    };*/
