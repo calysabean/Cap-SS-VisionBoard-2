@@ -4,7 +4,7 @@ function nextPage() {
     $('.submit').submit(function (event) {
         event.preventDefault();
         $('.results').load('index.html')
-    })
+ })
 }
 
 function selectedData(){
@@ -13,9 +13,9 @@ function selectedData(){
     event.preventDefault();
     $.each($("input[name='answer']:not(:checked)"), function() {
     $(this).closest('div').hide();
-      });
-      })
-      }
+  });
+ })
+}
 
 function myVisionPage() { 
     $('.secondView').remove();
@@ -23,17 +23,14 @@ function myVisionPage() {
     $('.hiddenForm').css('display', 'block');
 }
 
-
-
-      function additionalOptions(){
-        $('.box').on('click', function (event) {
-          event.preventDefault();
-      
-          $.each($("input[name='answer']"), function() {
-        $(this).closest('div').show();
-          });
-          })
-          }
+function additionalOptions(){
+    $('.box').on('click', function (event) {
+    event.preventDefault();
+    $.each($("input[name='answer']"), function() {
+    $(this).closest('div').show();
+   });
+ })
+}
 
           function deleteOption(id) {
             //  let id = $('.answerOption1').val();
