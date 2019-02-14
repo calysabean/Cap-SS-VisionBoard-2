@@ -9,6 +9,8 @@ function nextPage() {
 
 function myVisionPage() { 
     $('firstHide').remove();
+    $('secondView').hide();
+    $('.thirdView').show();
     $('.hiddenForm').css('display', 'block');
   }
 
