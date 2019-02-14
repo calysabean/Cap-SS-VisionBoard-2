@@ -7,23 +7,23 @@ function nextPage() {
     })
 }
 
-function myVisionPage() { 
-    $('firstHide').remove();
-    $('.secondView').remove();
-    $('.thirdView').show();
-    $('.hiddenForm').css('display', 'block');
-  }
-
-  function selectedData(){
+function selectedData(){
     $('.pickGoals').on('click', function (event) {
-        myVisionPage();
-      event.preventDefault();
-  
-      $.each($("input[name='answer']:not(:checked)"), function() {
+    myVisionPage();
+    event.preventDefault();
+    $.each($("input[name='answer']:not(:checked)"), function() {
     $(this).closest('div').hide();
       });
       })
       }
+
+function myVisionPage() { 
+    $('.secondView').remove();
+    $('.thirdView').show();
+    $('.hiddenForm').css('display', 'block');
+}
+
+
 
       function additionalOptions(){
         $('.box').on('click', function (event) {
