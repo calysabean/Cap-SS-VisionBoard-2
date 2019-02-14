@@ -1,5 +1,19 @@
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 
+// registers user on signUp
+$('.jSsignUpForm').on('click', '.jSsignUP1', function (event) {
+    event.preventDefault();
+    let registeredUser = {};
+    registeredUser.username = $('.jsUserName').val();
+    registeredUser.password = $('.jsPassword').val();
+    registeredUser.firstName = $('.jsFirstName').val();
+    registeredUser.lastName = $('.jsLastName').val();
+    processUser(registeredUser)
+    $('.jsUserName').val('');
+    $('.jsPassword').val('')
+    $('.jsFirstName').val('');
+    $('.jsLastName').val('');
+});
 
 // This function verifies the user and then the response loads the pick-goals.html page.
 function processUser(registeredUser) {
@@ -55,7 +69,7 @@ function getAllGoals() {
         })
 }
 
-// This function is for an input submit button on the pick-goals.html page, when submitted the myVisionPage function will run and the closest div not checked will be hidden. 
+// This function is for an input submit button on the pick-goals.html page, when submitted the myVisionPage function will run and the closest div 'not' checked will be hidden. 
 function selectedData(){
     $('.pickGoals').on('click', function (event) {
     myVisionPage();
@@ -84,151 +98,7 @@ function additionalOptions(){
 }
 
 
-
-$('.jSsignUpForm').on('click', '.jSsignUP1', function (event) {
-    event.preventDefault();
-    let registeredUser = {};
-    registeredUser.username = $('.jsUserName').val();
-    registeredUser.password = $('.jsPassword').val();
-    registeredUser.firstName = $('.jsFirstName').val();
-    registeredUser.lastName = $('.jsLastName').val();
-    processUser(registeredUser)
-    $('.jsUserName').val('');
-    $('.jsPassword').val('')
-    $('.jsFirstName').val('');
-    $('.jsLastName').val('');
-});
-
-
-$(() => {
-    getAllGoals();
-    /*getAllGoals1();*/
-    selectedData();
-    additionalOptions();
-    deleteButton();
-    getId();
-});
-
-/* const answerOption = document.getElementById("answerOption");
-
- answerOption.addEventListener("submit", (e) => {
-     e.preventDefault();
-
-     console.log("form has been submitted")
- })*/
-
-/*$(document).ready(function() {
-$('.pickGoals').on('click', function(){
-    var text = "";
-$('#answerOption:checked').each(function() {
-    text += $(this).val() + ',';
-});
-text=text.substring(0, text.length-1);
-$('#selectedtext').val(text);
-})
-
-})*/
-
-/*$('.js-row"').on('click', function(event) {
-event.preventDefault();
-return document.html(`Are you sure you want to return to the options page?`    
-});
-      use modal?*/
-
-/* function for pick-goals page*/
-
-/*function selectedData(){
-  $('.pickGoals').on('click', function (event) {
-    event.preventDefault();
- 
-    $.each($("input[name='answer'](:checked)"), function() {
-for (let i = 0; i < )
-  });
-    }) */
-
-/* function displayResult(result) {
-   return `
-   <div class="viewPort formCss">
-   <section class="formCss3">
-   <form class="finalResults">
-     <fieldset>
-     <label for="answerOption">
-     <input title="checkBox" class="answerOption" type="checkbox" value="${result.goal}" name="answer" >
-     </label>
-     </fieldset>
-     </form>
-     <p>${result.category}</p>
-     <p>${result.goal}</p>
-     </section>
-   </div> 
-   `;
- }*/
-
-
-/*function getAllGoals1() {
-   $('.my-chosen-results').html("");
-   $.ajax({
-           method: 'POST',
-           url: '/my-vision',
-           dataType: 'json'
-       })
-       .done((goals) => {
-           console.log(goals);
-           goals.forEach((option) => {
-               $('.my-chosen-results').append(`
-       <div action="my-vision.html" method="POST" class="viewPort formCss">
-       <section class="formCss3">
-       <form action="pick-goals.html" class="finalResults">
-         <fieldset>
-         <label for="answerOption">
-         <input title="checkBox" id="answerOption" class="theClass" type="checkbox" value="${option.goal}" name="answer" >
-         </label>
-         </fieldset>
-         <p>${option.category}</p>
-         <p>${option.goal}</p>
-         </section>
-         </form>
-       </div> 
-           `)
-                   })
-   }
-   */
-
-   
-/*function getAllGoals1() {
-    $('.my-chosen-results').html("");
-    $.ajax({
-        method: 'POST',
-        url: '/my-vision',
-        dataType: 'json'
-    })
-    .done((goals) => {
-        goals.forEach((option) => {
-            for (let i = 0; i < option.length; i++) {
-                if ($('.answerOption1:checkbox:checked')) {
-                    $('.answerOption1:checkbox:checked').map(function () {
-                        $('.my-chosen-results').append(`
-                            <div class="viewPort formCss">
-                            <section class="formCss3">
-                            <form action="pick-goals.html" class="finalResults">
-                            <fieldset>
-                            <label for="answerOption">
-                            <input title="checkBox" id="answerOption" class="theClass" type="checkbox" value="${option.goal}" name="answer" >
-                            </label>
-                            </fieldset>
-                            <p>${option.category}</p>
-                            <p>${option.goal}</p>
-                            </section>
-                            </form>
-                            </div> 
-                        `)
-                    })
-                }
-            }
-        })
-    })
-}*/
-
+// This function makes a Post request
 function createGoal(goalName, journalEntry) {
     const data = {
         goal: goalName,
@@ -247,82 +117,54 @@ return fetch('/goals',
             if (response.ok) {
                 return response.json();
             }
-            throw new Error(response.statusText);
+            throw new Error(response);
         })
         .catch(err => {
-            $('.js-error-message').text(`Oops! Something went wrong: ${err.message}`);
+            console.log('something went wrong');
         });
     }
 
-    function watchForm() {
-    
+    // This function deals with the notes box on pick-goals.html, once values are entered then a POST request will be sent to the server and GET request will populate the text on the page.
 
+function watchForm() {
         $(".new-goal").submit(event => {
-            event.preventDefault();
-            const categoryName = $('.my-category').val();
-            const commentText = $('.js-mantra').val();
-            createGoal(categoryName, commentText);
-        });
-    
-    
-    
-       /* $(".js-delete").submit(event => {
-            event.preventDefault();
-            delete this.data;
-        });
-    
-        $(".js-edit").submit(event => {
-            event.preventDefault();
-            editGoal(goalId, goalName, mantraText);
-        });*/
+        event.preventDefault();
+        const categoryName = $('.my-category').val();
+        const commentText = $('.my-notes').val();            createGoal(categoryName, commentText);
+     });
     }
     
-    $(watchForm);
-
-    $(function () {
-        getGoals();
-        watchForm();
-    })
-    
-    function getGoals() {
+function getGoals() {
         fetch('/goals/', {
             method: 'GET',
         })
             .then(response => {
                 if (response.ok) {
-                    return response.json();
+                return response.json();
                 }
-                throw new Error(response.statusText);
+                throw new Error(response);
             })
             .then(responseJson => displayGoals(responseJson))
             .catch(err => {
-                $('#js-error-message').text(`Oops! Something went wrong: ${err.message}`);
+               console.log('something went wrong');
             });
     }
     
     function displayGoals(responseJson) {
-        for (let i = 0; i < responseJson.goals.length; i++) {
-            $("#goals-list").append(
+        for (let i = 0; i < responseJson.length; i++) {
+            $(".post-results").append(
                 `<li>
-                    <h2><span class="red-dot-title">&bull; </span>${responseJson.goals[i].goal}
-                    <span class="red-dot-title"> &bull;</span></h2>
-                    <p class="mantra-header">Mantra:</p>
-                    <p class="mantras">${responseJson.goals[i].mantra}</p>
-                    <p class="status-header">Status:</p>
-                    <form id="status">
-                        <div class="radios">
-                            <input class="in-progress" type="radio" name="goal-status" value="in-progress" 
-                            ${responseJson.goals[i].status === 'inprogress' ? 'checked' : ''} 
-                            data-id="${responseJson.goals[i].id}"> In-Progress</input>
-                            </br>
-                            <input class="achieved"  type="radio" name="goal-status" value="achieved" 
-                            ${responseJson.goals[i].status === 'achieved' ? 'checked' : ''} 
-                            data-id="${responseJson.goals[i].id}"> Achieved</input></br>
-                        </div>
-                        <button class="js-edit" type="button" data-id="${responseJson.goals[i].id}">Edit Goal</button>
-                        <button class="js-delete" type="button" data-id="${responseJson.goals[i].id}">Delete Goal</button>
-                    </form>
+                    <h2>${responseJson.caregory[i]}/h2>
+                    <p>${responseJson.comments[i]}</p>
                 </li>`
             )
         };
     };
+
+    $(() => {
+        getAllGoals();
+        selectedData();
+        additionalOptions();
+        getGoals();
+        watchForm();
+    });
