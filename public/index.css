@@ -341,6 +341,10 @@ text-align: center;
     display:none;
   }
 
+  .secondView {
+    display:none;
+  }
+
   .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
