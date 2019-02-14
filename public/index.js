@@ -1,15 +1,20 @@
-//URL extension for app
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 
-// userVisionPage will 
-function userVisionPage() { 
-    $('.secondPageView').hide();
+function nextPage() {
+    $('.submit').submit(function (event) {
+        event.preventDefault();
+        $('.results').load('index.html')
+    })
+}
+
+function myVisionPage() { 
+    $('firstHide').remove();
     $('.hiddenForm').css('display', 'block');
   }
 
   function selectedData(){
     $('.pickGoals').on('click', function (event) {
-        userVisionPage();
+        myVisionPage();
       event.preventDefault();
   
       $.each($("input[name='answer']:not(:checked)"), function() {
@@ -128,7 +133,7 @@ function processUser(registeredUser) {
 
 $(() => {
     getAllGoals();
-    /*nextPage();*/
+    nextPage();
     /*getAllGoals1();*/
     selectedData();
     additionalOptions();
@@ -281,7 +286,7 @@ return fetch('/goals',
         });
     }
 
-    /*function watchForm() {
+    function watchForm() {
     
 
         $(".new-goal").submit(event => {
@@ -289,7 +294,6 @@ return fetch('/goals',
             const categoryName = $('.my-category').val();
             const commentText = $('.js-mantra').val();
             createGoal(categoryName, commentText);
-            getGoals();
         });
     
     
@@ -302,10 +306,10 @@ return fetch('/goals',
         $(".js-edit").submit(event => {
             event.preventDefault();
             editGoal(goalId, goalName, mantraText);
-        });
-    }*/
+        });*/
+    }
     
-    /*$(watchForm);
+    $(watchForm);
 
     $(function () {
         getGoals();
@@ -329,21 +333,28 @@ return fetch('/goals',
     }
     
     function displayGoals(responseJson) {
-        for (let i = 0; i < responseJson.goal.length; i++) {
-            $(".post-results").append(
+        for (let i = 0; i < responseJson.goals.length; i++) {
+            $("#goals-list").append(
                 `<li>
+                    <h2><span class="red-dot-title">&bull; </span>${responseJson.goals[i].goal}
                     <span class="red-dot-title"> &bull;</span></h2>
                     <p class="mantra-header">Mantra:</p>
+                    <p class="mantras">${responseJson.goals[i].mantra}</p>
                     <p class="status-header">Status:</p>
                     <form id="status">
                         <div class="radios">
-             
+                            <input class="in-progress" type="radio" name="goal-status" value="in-progress" 
+                            ${responseJson.goals[i].status === 'inprogress' ? 'checked' : ''} 
+                            data-id="${responseJson.goals[i].id}"> In-Progress</input>
                             </br>
                             <input class="achieved"  type="radio" name="goal-status" value="achieved" 
-                            > Achieved</input></br>
+                            ${responseJson.goals[i].status === 'achieved' ? 'checked' : ''} 
+                            data-id="${responseJson.goals[i].id}"> Achieved</input></br>
                         </div>
-                        </form>
+                        <button class="js-edit" type="button" data-id="${responseJson.goals[i].id}">Edit Goal</button>
+                        <button class="js-delete" type="button" data-id="${responseJson.goals[i].id}">Delete Goal</button>
+                    </form>
                 </li>`
             )
         };
-    };*/
+    };
