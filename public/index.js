@@ -4,7 +4,6 @@ let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 // userVisionPage will 
 function userVisionPage() { 
     $('.secondPageView').hide();
-    $('.thirdPageView').css('display', 'block');
     $('.hiddenForm').css('display', 'block');
   }
 
