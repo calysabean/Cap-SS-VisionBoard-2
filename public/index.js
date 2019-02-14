@@ -1,5 +1,6 @@
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 
+
 function nextPage() {
     $('.submit').submit(function (event) {
         event.preventDefault();
