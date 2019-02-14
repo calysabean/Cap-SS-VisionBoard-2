@@ -1,13 +1,5 @@
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 
-
-function nextPage() {
-    $('.submit').submit(function (event) {
-        event.preventDefault();
-        $('.results').load('index.html')
- })
-}
-
 function selectedData(){
     $('.pickGoals').on('click', function (event) {
     myVisionPage();
@@ -133,7 +125,6 @@ function processUser(registeredUser) {
 
 $(() => {
     getAllGoals();
-    nextPage();
     /*getAllGoals1();*/
     selectedData();
     additionalOptions();
