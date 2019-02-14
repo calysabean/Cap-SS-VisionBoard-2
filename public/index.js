@@ -1,9 +1,9 @@
 //URL extension for app
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 
-// userVisionPage function
+// userVisionPage will 
 function userVisionPage() { 
-    $('firstHide').remove();
+    $('firstHide').hide();
     $('.hiddenForm').css('display', 'block');
   }
 
