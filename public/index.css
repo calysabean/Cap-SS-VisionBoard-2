@@ -341,9 +341,9 @@ text-align: center;
     display:none;
   }
 
-  .thirdPageView {
+  /*.thirdPageView {
     display: none;
-  }
+  }*/
 
   .tooltip .tooltiptext {
     visibility: hidden;
