@@ -260,3 +260,94 @@ for (let i = 0; i < )
         })
     })
 }*/
+
+function createGoal(goalName, journalEntry) {
+    const data = {
+        goal: goalName,
+        comments: journalEntry
+}
+
+return fetch('/goals',
+        {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error(response.statusText);
+        })
+        .catch(err => {
+            $('.js-error-message').text(`Oops! Something went wrong: ${err.message}`);
+        });
+    }
+
+    function watchForm() {
+    
+
+        $(".new-goal").submit(event => {
+            event.preventDefault();
+            const categoryName = $('.my-category').val();
+            const commentText = $('.js-mantra').val();
+            createGoal(categoryName, commentText);
+        });
+    
+    
+    
+       /* $(".js-delete").submit(event => {
+            event.preventDefault();
+            delete this.data;
+        });
+    
+        $(".js-edit").submit(event => {
+            event.preventDefault();
+            editGoal(goalId, goalName, mantraText);
+        });*/
+    }
+    
+    $(watchForm);
+
+    $(function () {
+        getGoals();
+        watchForm();
+    })
+    
+    function getGoals() {
+        fetch('/goals/', {
+            method: 'GET',
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error(response.statusText);
+            })
+            .then(responseJson => displayGoals(responseJson))
+            .catch(err => {
+                $('#js-error-message').text(`Oops! Something went wrong: ${err.message}`);
+            });
+    }
+    
+    function displayGoals(responseJson) {
+        for (let i = 0; i < responseJson.goal.length; i++) {
+            $(".post-results").append(
+                `<li>
+                    <span class="red-dot-title"> &bull;</span></h2>
+                    <p class="mantra-header">Mantra:</p>
+                    <p class="status-header">Status:</p>
+                    <form id="status">
+                        <div class="radios">
+             
+                            </br>
+                            <input class="achieved"  type="radio" name="goal-status" value="achieved" 
+                            > Achieved</input></br>
+                        </div>
+                        </form>
+                </li>`
+            )
+        };
+    };

@@ -97,7 +97,7 @@ app.post('/goals', (req, res) => {
     }
   });
 
-  Goal
+  GoalPost
   .create({
     category: req.body.category,
     goal: req.body.goal,
@@ -127,7 +127,7 @@ app.put('/goals/:id', (req, res) => {
     }
   });
 
-  Goal
+  GoalPost
     .findByIdAndUpdate(req.params.id, { $set: updated }, { new: true })
     .then(updatedPost => res.status(200).json({
       id: updatedPost.id,

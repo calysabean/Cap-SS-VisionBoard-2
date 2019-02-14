@@ -23,9 +23,9 @@ goalSchema.methods.serialize = function() {
 };
 
 var goalPostSchema = mongoose.Schema({
-  category: 'string',
-  goal: 'string',
-  comments: [commentSchema]
+  category: { type: String, required: true },
+  goal: { type: String, required: true },
+  comments: { type: String, required: true }
 });
 
 goalPostSchema.methods.serialize = function() {
