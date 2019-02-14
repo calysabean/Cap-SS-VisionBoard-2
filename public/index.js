@@ -1,60 +1,33 @@
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 
-function selectedData(){
-    $('.pickGoals').on('click', function (event) {
-    myVisionPage();
-    event.preventDefault();
-    $.each($("input[name='answer']:not(:checked)"), function() {
-    $(this).closest('div').hide();
-  });
- })
-}
 
-function myVisionPage() { 
-    $('.secondView').remove();
-    $('.thirdView').show();
-    $('.hiddenForm').css('display', 'block');
-}
-
-function additionalOptions(){
-    $('.box').on('click', function (event) {
-    event.preventDefault();
-    $.each($("input[name='answer']"), function() {
-    $(this).closest('div').show();
-   });
- })
-}
-
-          function deleteOption(id) {
-            //  let id = $('.answerOption1').val();
-            let optionID = url + '/' + id;
-            return fetch(optionID, {
-                method: 'delete'
-                })
-                .then(response => {
-                    console.log('Deleted');
-                })
-                .catch(err => {
-                    console.error(err);
-                });
+// This function verifies the user and then the response loads the pick-goals.html page.
+function processUser(registeredUser) {
+    fetch('/api/users',
+        {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            method: "POST",
+            body: JSON.stringify(registeredUser)
+        })
+        .then(response => {
+            if (response.status === 201) {
+                window.location.href = "pick-goals.html";
             }
-      
-    function deleteButton() {
-          $('.deleteGoals').on('click', function (event) {
-            event.preventDefault();
-            let checkVal = $('.answerOption1:checked').val();
-            deleteOption(checkVal);
-            $('.answerOption1').val('');
+            else {
+                return response.json()
+            }
 
-    });
-}
+        })
+        .then(response => {
+            $('.jSsignUP1').text(response.location + ":   " + response.message);
+        })
+        .catch(error => console.log('Oops something went wrong'));
+};
 
-function getId(){
-	$('.viewPort').on('click', '.answerOption1', function(event){
-		id = $(this).attr('value');
-	});
-}
-
+// This GET request loads the data results on the pick-goals page.
 function getAllGoals() {
     $('.dashboaresults1').html("");
     $.ajax({
@@ -82,6 +55,34 @@ function getAllGoals() {
         })
 }
 
+// This function is for an input submit button on the pick-goals.html page, when submitted the myVisionPage function will run and the closest div not checked will be hidden. 
+function selectedData(){
+    $('.pickGoals').on('click', function (event) {
+    myVisionPage();
+    event.preventDefault();
+    $.each($("input[name='answer']:not(:checked)"), function() {
+    $(this).closest('div').hide();
+  });
+ })
+}
+
+// This function will remove the h1 code from the secondView div and then show the h1 code for the thirdView class div. It also displays the main page content.
+function myVisionPage() { 
+    $('.secondView').remove();
+    $('.thirdView').show();
+    $('.hiddenForm').css('display', 'block');
+}
+
+// The box class is associated with the six category divs on the pick-goals page. When a user clicks on any of the div's with the class box then the original list of categories/goals will generate.
+function additionalOptions(){
+    $('.box').on('click', function (event) {
+    event.preventDefault();
+    $.each($("input[name='answer']"), function() {
+    $(this).closest('div').show();
+   });
+ })
+}
+
 
 
 $('.jSsignUpForm').on('click', '.jSsignUP1', function (event) {
@@ -98,30 +99,6 @@ $('.jSsignUpForm').on('click', '.jSsignUP1', function (event) {
     $('.jsLastName').val('');
 });
 
-function processUser(registeredUser) {
-    fetch('/api/users',
-        {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify(registeredUser)
-        })
-        .then(response => {
-            if (response.status === 201) {
-                window.location.href = "pick-goals.html";
-            }
-            else {
-                return response.json()
-            }
-
-        })
-        .then(response => {
-            $('.jSsignUP1').text(response.location + ":   " + response.message);
-        })
-        .catch(error => console.log('Oops something went wrong'));
-};
 
 $(() => {
     getAllGoals();
