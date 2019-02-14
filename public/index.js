@@ -1,22 +1,15 @@
 //URL extension for app
 let url = 'https://murmuring-temple-70944.herokuapp.com/goals/';
 
-//This button 
-/*function nextPage() {
-    $('.submit').submit(function (event) {
-        event.preventDefault();
-        $('.results').load('index.html')
-    })
-}*/
-
-function myVisionPage() { 
+// userVisionPage function
+function userVisionPage() { 
     $('firstHide').remove();
     $('.hiddenForm').css('display', 'block');
   }
 
   function selectedData(){
     $('.pickGoals').on('click', function (event) {
-        myVisionPage();
+        userVisionPage();
       event.preventDefault();
   
       $.each($("input[name='answer']:not(:checked)"), function() {
