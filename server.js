@@ -88,6 +88,7 @@ app.get('/goals/:id', (req, res) => {
 
 
 app.post('/goals', (req, res) => {
+  console.log(req.body);
   const requiredFields = ['category', 'goal'];
   requiredFields.forEach(field => {
     if (!(field in req.body)) {

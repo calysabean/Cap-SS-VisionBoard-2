@@ -103,8 +103,9 @@ function createGoal(goalName, journalEntry) {
     const data = {
         goal: goalName,
         comments: journalEntry
+        
 }
-
+console.log(data);
 return fetch('/goals',
         {
             method: 'POST',
@@ -154,7 +155,7 @@ function getGoals() {
         for (let i = 0; i < responseJson.length; i++) {
             $(".post-results").append(
                 `<li>
-                    <h2>${responseJson.caregory[i]}/h2>
+                    <h2>${responseJson.category[i]}/h2>
                     <p>${responseJson.comments[i]}</p>
                 </li>`
             )
