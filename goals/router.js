@@ -13,6 +13,7 @@ const passport = require('passport')
 const jsonParser = bodyParser.json();
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
+//code I want to add but can't because of authentication
 /*.find({
     user: req.user.id
 })*/

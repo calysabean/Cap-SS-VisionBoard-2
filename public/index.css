@@ -104,17 +104,17 @@ legend {
 
 /* this affects the form for signUp.html*/
 .signUpIn1 {
-  width: 30%;
+  width: 46%;
   height: 300px;
-  margin-top: 6px;
+  margin-top: 225px;
   margin-left: auto;
-  margin-right:auto;
-  background:rgba(245, 245, 238, 0.8);
+  margin-right: auto;
+  background: rgba(245, 245, 238, 0.8);
   padding-bottom: 5px;
   border-radius: 2%;
   padding-left: 5px;
   padding-top: 5px;
-  }
+}
 
 /* this affects the button for "signUp" in index.html*/
 .signUP {
@@ -149,6 +149,11 @@ legend {
   margin-top: -122px;
 }
 
+.jSsignUpForm {
+  margin-top: 0px;
+}
+
+/*this is the code for the comments form on pick-goals.html*/
 .commentsForm {
   width: 70%;
   height: 348px;
@@ -507,12 +512,10 @@ text-align: center;
   /*STOPPED HERE*/
   /*For Desktop Screens*/
 
-@media only screen and (min-width: 700px) {
+/*@media only screen and (min-width: 700px) {
   
-  .viewPort {
-    width: 50%;
-  }
-}
+ 
+}*/
 
 /*For Mobile Screens*/
 @media only screen and (max-width: 699px) {
@@ -530,36 +533,5 @@ text-align: center;
     background: gray;
   }
 
-  .landingBox {
-    height: 250px;
-  }
-  .gallery {
-    width: 100%;
-    height: 247px;
-    padding-right: 1px;
-    padding-left: 1px;
-    margin-top: 40%;
-}
-form.finalResults {
-  right: 0%;
-  top: 10px;
-  width: 100%;
-  height: 40px;
-  margin-top: 10px;
-}
-.viewPort {
-  margin-top: 25%;
-}
-.submitButton {
-  display: none;
-  position: fixed;
-  margin-left: 82%;
-  margin-top: 0px;
-  background: red;
-  color: white;
-  height: 80px;
-  width: 60px;
-  left: 0px;
-  border-radius: 5%;
-}
+  
 }
