@@ -21,6 +21,7 @@ router.post('/', jsonParser, (req, res) => {
     });
   }
 
+  //KEEP?
   const stringFields = ['username', 'password', 'firstName', 'lastName'];
   const nonStringField = stringFields.find(
     field => field in req.body && typeof req.body[field] !== 'string'
@@ -123,6 +124,7 @@ router.post('/', jsonParser, (req, res) => {
     });
 });
 
+//KEEP?
 router.get('/', (req, res) => {
   return User.find()
     .then(users => res.json(users.map(user => user.serialize())))

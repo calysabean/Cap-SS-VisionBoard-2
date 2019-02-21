@@ -1,13 +1,14 @@
 {
   "name": "capapp2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Application for vision-board",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha --exit ./test"
+    "test": "mocha --exit ./test",
+    "dev": "nodemon server.js"
   },
-  "author": "",
+  "author": "Dream Chaser",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -24,6 +25,7 @@
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "uuid": "^3.3.2"
   }
 }

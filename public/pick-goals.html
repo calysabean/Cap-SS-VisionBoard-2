@@ -1,95 +1,104 @@
 <!DOCTYPE html>
   <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Pick-Your-Goals</title>
-        <script
-          src="https://code.jquery.com/jquery-3.2.1.min.js"
-          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-          crossorigin="anonymous"></script>
-        <link href="index.css" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Pick-Your-Goals</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
     
-        <body>
-          <div class="firstHide">        
-        <section>
-          <span class="secondView"><h1>Pick your target goals and click submit!</h1></span>
-         <span class="thirdView"><h1>Live your Best Life!</h1></span>
+  <body>
+    <div class="firstHide">        
+    <section>
+    <span class="secondView"><h1>Pick your target goals and click submit!</h1></span>
+    <span class="thirdView"><h1>Live your Best Life!</h1></span>
     </section>
-  </div>
+    </div>
 
-      </main>
+    </main>
           
-              <section>
+    <section>
 
-                  <nav role="navigation">
-                    </nav>
+    <nav role="navigation">
+    </nav>
 
-                  <form id="myform" action="#" >
-                      <div class="dashboaresults1" ></div>
-                   </form>
-                    <input class="pickGoals" form="myform" type="submit"  />
-                    <input value="delete" class="deleteGoals" form="myform" type="submit"  />
+    <form id="myform" action="#" >
+    <div class="dashboaresults1" ></div>
+    </form>
+    <input class="pickGoals" form="myform" type="submit"  />
+    <input value="Delete" class="deleteGoals" form="myform" type="submit"  />
+      
+    <div class="hiddenForm">
 
+        <section class="secondSection">
+
+        <div class="commentsForm"> 
+
+            <form class="new-goal" role="form" action="#">
+            <legend>Notes to reach my goals, choose a category.</legend>
+            
+            <label class="category" for="category"></label>
+              <select id="category" type="text" title="category" class="my-category"  placeholder="Enter Category" required>
+                <option value="0"></option>
+                <option value="1" selected>Career</option>
+                <option value="2">Financial</option>
+                <option value="3">Physical</option>
+                <option value="4">Personal-development</option>
+                <option value="5">Spiritual</option>
+                <option value="6">Experiential</option>
+              </select>
+                     
+            <label for="notes">
+            <input id="notes" title="notes"  type="text" class="my-notes" placeholder="Enter Notes" required>
+            </label>
+            
+            <button type="submit" class="submitPost">Submit</button>  
+                
+            </form>
+            </div>
+            
+            <div class="post-results"></div>
+</section>
+
+    <div class="row js-row">
+    <div class="col-3">
+    <div class="box tooltip orange"><img src="../pictures/career.jpg" alt="Career"> <p> <span class="tooltiptext">Click to show options list </span><span class="wordSpans">Career</span></p></div>
+    </div>
+    
+    <div class="col-3">
+    <div class="box tooltip blue"><img src="../pictures/financial.jpg" alt="Financial"><p> <span class="tooltiptext">Click to show options list </span><span class="wordSpans">Financial</span> </p></div>
+    </div>
+    
+    <div class="col-3">
+    <div class="box tooltip green"><img src="../pictures/spiritual.jpg" alt="Spiritual"><p> <span class="tooltiptext">Click to show options list </span><span class="wordSpans">Spiritual</span></p></div>
+    </div>
+    </div>
           
-                <div class="hiddenForm">
-              <div class="row js-row">
-                <div class="col-3">
-                  <div class="box tooltip orange"><img src="career.jpg" alt="Career"> <p> <span class="tooltiptext">HELLO </span><span>Career</span></p></div>
-                </div>
-                <div class="col-3">
-                  <div class="box blue"><img src="financial.jpg" alt="Financial"><p> <span>Financial</span> </p></div>
-                </div>
-                <div class="col-3">
-                  <div class="box green"><img src="spiritual.jpg" alt="Spiritual"><p> <span>Spiritual</span></p></div>
-                </div>
-              </div>
-          
-              <div class="row js-row">
-                <div class="col-4">
-                  <div class="box orange"><img src="experiential.jpg" alt="Experiential"><p> <span>Experiential</span></p></div>
-                </div>
-                <div class="col-4">
-                  <div class="box blue"><img src="physical.jpg" alt="Physical"><p> <span>Physical</span></p></div>
-                </div>
-                <div class="col-4">
-                  <div class="box green"><img src="personaldevelopment.jpg" alt="Personal-Development"><p> <span>Personal-Development</span> </p></div>
-                </div>
-              </div>
+    <div class="row js-row">
+    <div class="col-4">
+    <div class="box tooltip orange"><img src="../pictures/experiential.jpg" alt="Experiential"><p> <span class="tooltiptext">Click to show options list </span><span class="wordSpans">Experiential</span></p></div>
+    </div>
+    
+    <div class="col-4">
+    <div class="box tooltip blue"><img src="../pictures/physical.jpg" alt="Physical"><p> <span class="tooltiptext">Click to show options list </span><span class="wordSpans">Physical</span></p></div>
+    </div>
+    
+    <div class="col-4">
+    <div class="box tooltip green"><img src="../pictures/personaldevelopment.jpg" alt="Personal-Development"><p> <span class="tooltiptext">Click to show options list </span><span class="wordSpans">Personal-Development</span> </p></div>
+    </div>
+    </div>
 
  <button onclick="location.href='index.html';" type="submit" class="reloadButton">Return to Home</button>
 
- <div class="my-chosen-results"></div>
 
 <div class="js-error-message"></div>
-  <div class="signUpIn"> 
 
-    <form class="new-goal" role="form" action="#">
-       <legend>Notes to reach my goals</legend>
-         <label class="category" for="category">
-         <input id="category" type="text" title="category" class="my-category"  placeholder="Enter Category" required>
-         </label>
-         
-         <label for="notes">
-          <input id="notes" title="notes"  type="text" class="my-notes" placeholder="Enter Notes" required>
-          </label>
+</section>
+</div>
 
-
-
-  <button type="submit" class="submit">submit</button>  
-  <input type="submit" class="submit-new-goal" value="Commit to your new goal">
-    
-         </form>
-           </div>
-
-<div class="post-results"></div>
-
-      </section>
-    </div>
-
-      <script src="index.js"></script>
-    </body>
+<script src="index.js"></script>
+</body>
 </html>
