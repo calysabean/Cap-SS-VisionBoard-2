@@ -12,9 +12,11 @@ const passport = require('passport')
 const jsonParser = bodyParser.json();
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
-router.get('/', (req, res) => {
+router.get('/', jwtAuth, (req, res) => {
     GoalPost
-    .find()
+    .find({
+        user: req.user.id
+    })
     .then(goals => {
       res.json(goals.map(item => {
         return {
@@ -71,7 +73,7 @@ router.post('/', jsonParser, (req, res) => {
         .create({
             category: req.body.category,
             comments: req.body.comments,
-           // userId: req.user._id
+          //userId: req.user.id
         })
         .then(goal => res.status(201).json(goal.serialize()))
         .catch(err => {
@@ -81,7 +83,7 @@ router.post('/', jsonParser, (req, res) => {
 
 router.put('/:id', jsonParser, (req, res) => {
     const toUpdate = {};
-    const updateableFields = ['goal', 'comments'];
+    const updateableFields = ['category', 'comments'];
 
     updateableFields.forEach(field => {
         if (field in req.body) {

@@ -4,9 +4,11 @@
 }
    
 body {
+  width:100%;
   margin: 0px;
   background:url('../pictures/vision.jpg') no-repeat center fixed;
 }
+
 
 nav {
   height: 66px;
@@ -44,8 +46,6 @@ h1 {
   height: 250px;
   margin-top: 16px;
   padding-top: 23px;
-  padding-right: 35%;
-  padding-left: 35%;
   padding-bottom: 100px;
   font-size: 25px;
   top: 50px;
@@ -90,18 +90,6 @@ legend {
   text-align: center;
 }
 
-/* this affects the button for "login" in index.html*/
-.logIn {
-  margin-top: 44px;
-  width: 45%;
-  outline: none;
-  cursor: pointer;
-  margin-top: 40px;
-  margin-left: 7px;
-  margin-right: 4px;
-  padding: 9px;
-}
-
 /* this affects the form for signUp.html*/
 .signUpIn1 {
   width: 46%;
@@ -135,13 +123,19 @@ legend {
   padding: 8px;
 }
 
+/*First section on pick-goals page*/
+.pickGoalsSection {
+  margin-top: 331px;
+}
+
 /*button reloads to main home page - index.html, but also logs user out*/
 .reloadButton {
   display: block;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;       
+  margin-top: 10px;
+  padding: 12px;       
 }
 
 /* affects positioning of signup.html form*/
@@ -176,7 +170,7 @@ legend {
 /*Display format of GET list*/
 .dbDisplay {
   border: solid lightgray;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.5);
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -191,7 +185,7 @@ legend {
   margin-right: auto;
   padding-right: 5px;
   padding-left: 2px;
-  padding-top: 49px;
+  padding-top: 93px;
   padding-bottom: 1px;
   height: 95px;
   width: 469px;
@@ -209,7 +203,7 @@ legend {
   margin-right: auto;
   padding-right: 5px;
   padding-left: 2px;
-  padding-top: 17px;
+  padding-top: 61px;
   padding-bottom: 1px;
   height: 90px;
   width: 469px;
@@ -242,11 +236,31 @@ legend {
   font-size: 20px;
 }
 
+.openingBox2 {
+  background: linear-gradient(132deg,  #f39774, #1665c1);
+  background-size: 400% 400%;
+  animation: BackgroundGradient 30s ease infinite;
+  width: 100%;
+  height: 250px;
+  margin-top: 16px;
+  padding-top: 23px;
+  padding-bottom: 100px;
+  font-size: 25px;
+  top: 50px;
+  color: white;
+  position: absolute;
+  border-bottom: solid white;
+}
+
+.cssClassOption {
+  text-align: center;
+}
+
 .answerOption1 {
   border: none;
   width: 34px;
   height: 44px;
-  display: inline-block;
+  display: none;
 }
 
 main .row {
@@ -257,6 +271,7 @@ main .row {
     height: 200px;
     width: 170px;
     padding-top: 30px;
+    border-radius: 5%
   }
   
   .box {
@@ -328,7 +343,7 @@ main .row {
 
   /*ruleset for selection options in pick-goals.html*/
   select {
-    width: 50%;
+    width: 31%;
     display: block;
     margin-right: auto;
     margin-left: auto;
@@ -427,7 +442,10 @@ text-align: center;
   .col-3, .col-4 {
     width: 100%;
   }
-  
+
+  .commentsCss {
+    margin-top: 181px;
+  }
   
   @media only screen and (min-width: 640px) {
     .col-3 {
@@ -443,12 +461,12 @@ text-align: center;
   .signUpIn {
     width: 70%;
     height: 348px;
-    margin-top: 336px;    
+    margin-top: 368px;    
     margin-left: auto;
     margin-right:auto;
     background:rgba(245, 245, 238, 0.8);
     padding-bottom: 5px;
-    border-radius: 2%;
+    border-radius: 5%;
     padding-top: 24px;
    }
 
@@ -462,8 +480,12 @@ text-align: center;
     font-weight: bold;
   }
 
+  .pickGoals {
+    display: hidden;
+  }
+
   label {
-    padding-left: 10px;
+    padding-left: 2%;
   }
 
   .my-notes {
@@ -482,9 +504,9 @@ text-align: center;
       background:  #f39774;
   }
 
-  .hiddenForm {
+  /*.hiddenForm {
     display:none;
-  }
+  }*/
 
   .thirdView {
     display:none;
@@ -509,29 +531,230 @@ text-align: center;
     visibility: visible;
   }
 
+  .pickGoalsPara {
+    font-size: 26px;  
+  }
+
   /*STOPPED HERE*/
   /*For Desktop Screens*/
-
-/*@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
   
- 
-}*/
+
+
+html {
+  zoom: 100%;
+}
+  .openingBox { 
+  background: linear-gradient(132deg, #f39774, #1665c1);
+  animation: BackgroundGradient 30s ease infinite;
+  width: 100%;
+  height: 253px;
+  margin-left: 0;
+  padding-bottom: 100px;
+  font-size: 25px;
+  top: 50px;
+  color: white;
+  position: absolute;
+  border-bottom: solid white;
+  border-width: 5px;
+}
+p {
+    border-top: 0px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 90px;
+    width: 56%;
+    font-size: 31px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.signUpIn {
+  width: 81%;
+  height: 437px;
+  margin-top: 368px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(245, 245, 238, 0.8);
+  padding-bottom: 5px;
+  border-radius: 2%;
+  font-size: 23px;
+  padding-top: 24px;
+}
+
+/* this affects the button for "login" in index.html*/
+.logIn {
+  background-color: azure;
+  border-radius: 8%;
+  margin-top: 61px;
+  width: 43%;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 0%;
+  padding: 16px;
+}
+
+/* this affects the button for "signup" in index.html*/
+.signUP {
+  background-color: azure;
+  border-radius: 8%;
+  margin-top: 61px;
+  width: 43%;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  margin-left: 0%;
+  margin-right: -14%;
+  padding: 16px;
+}
+.formOpener {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  color: white;
+  text-align: left;
+  margin: 4px;
+  padding-left: 13px;
+  padding-top: 13px;
+}
+
+}
 
 /*For Mobile Screens*/
 @media only screen and (max-width: 699px) {
   
-  .reloadButton {
-    display: inline;
-    color: black;
-    padding: 6px;
-    outline: none;
-    cursor: pointer;
-    margin-left: 61%;
-    top: 16px;
-    vertical-align: 5px;
-    position: absolute;
-    background: gray;
-  }
+body{
+width: 100%;
+position: fixed;
+}
 
+
+nav {
+  height: 66px;
+  width: 100%;
+  position: absolute;
+  top: -22px;
+  padding-left: 10px;
+}
+
+
+
+h1{
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 28px;
+color: white;
+text-align: center;
+margin-top: 17px;
+padding-top: 13px;
+}
+  .openingBox {
+  width: 100%;
+  height: 200px;
+  margin-top: -6px;
+  padding-left: 0%;
+  padding-top: 46px;
+  color: white;
+  position: absolute;
+  border-bottom: solid white;
+  }
   
+
+  p {
+    border-top: 0px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 90px;
+    width: 400px;
+    font-size: 21px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.signUpIn {
+  width: 94%;
+  height: 350px;
+  margin-top: 76%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(245, 245, 238, 0.8);
+  padding-bottom: 5px;
+  border-radius: 2%;
+  padding-top: 13px;
+}
+
+.paraTag {
+  font-size: 20px;
+  margin-right: auto;
+  margin-top: -28px;
+  margin-left: auto;
+  font-size: 17px;
+  padding-top: 29px;
+  padding-left: 0px;
+  padding-right: 72px;
+  margin-bottom: -73px;
+}
+
+.sectionIndex {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formOpener {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logIn {
+  margin-top: 44px;
+  width: 41%;
+  outline: none;
+  cursor: pointer;
+  margin-top: 71px;
+  margin-left: 5%;
+  margin-right: 4px;
+  padding: 20px;
+  background-color: azure;
+  border-radius: 8%;
+}
+
+.signUP {
+  position: relative;
+  left: -9px;
+  width: 41%;
+  outline: none;
+  cursor: pointer;
+  margin-top: 71px;
+  margin-left: 7px;
+  margin-right: 4px;
+  padding: 20px;
+  background-color: azure;
+  border-radius: 8%;
+}
+
+html {
+zoom: 98%
+
+}
+}
+
+@media only screen and (max-width: 320px) {
+  .signUP {
+    margin-left: -1px;
+}
+
+.paraTag {
+
+  padding-right: 120px;
+}
 }

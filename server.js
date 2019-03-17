@@ -14,17 +14,22 @@ const { router: goalsRouter } = require('./goals');
 // New code
 const { router: goalspostsRouter } = require('./goalsposts');
 
-
 mongoose.Promise = global.Promise;
 
 const { DATABASE_URL, PORT } = require('./config');
-//const { Goal } = require('./models');
 
 const app = express();
+
+//app.set('view engine', 'ejs'); // set up ejs for templating
 
 app.use(morgan('common'));
 app.use(express.static('public'));
 app.use(cors());
+
+// load the index.ejs file
+/*app.get('/', function(req, res) {
+  res.render('index.ejs'); // load the index.ejs file
+}); */
 
 
 passport.use(localStrategy);
@@ -42,6 +47,13 @@ app.get('/api/protected', jwtAuth, (req, res) => {
   return res.json({
     data: 'rosebud'
   });
+});
+
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE');
+  next();
 });
 
 //The below line blocks my GET request

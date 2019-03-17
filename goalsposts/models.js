@@ -11,7 +11,7 @@ const goalPostSchema = mongoose.Schema({
   
   goalPostSchema.methods.serialize = function() {
     return {
-      id: this._id,
+      //id: this._id,
       category: this.category,
       comments: this.comments
     };
